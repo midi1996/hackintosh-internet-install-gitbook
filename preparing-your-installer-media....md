@@ -4,7 +4,7 @@ After the download, you'll find a new folder named `macOS downloads` where the p
 
 ## Winders \(windows\)
 
-Thanks to /u/corpnewt time and head butting, he made a pretty good script to make the installer on the USB.
+Thanks to /u/corpnewt time and head-butting, he made a pretty good script to make the installer on the USB.
 
 Inside the same folder of gibMacOS, you'll find a cute `MakeInstall.bat` , double click it, accept UAC admin user, you'll be greeted by a CMD screen. The software will download software needed \(`dd` port for windows and 7-zip\). Then you'll be greeted with a list of drives:
 
@@ -18,6 +18,7 @@ Inside the same folder of gibMacOS, you'll find a cute `MakeInstall.bat` , doubl
 
 ![](.gitbook/assets/image%20%283%29.png)
 
+* Note: if you downloaded only one version of macOS, you can just paste the path for `macOS downloads` and the script will look for the pkg. If you have multiple versions, it will use the first pkg it finds, you may want, then, to specify which folder contains the pkg needed, or paste the pkg itself. \(thanks to CorpNewt for pointing that out\)
 * then paste it in the CMD window \(by Right Clicking in the window, this will paste what's in the clip board\)
 * the program will then extract and restore to the USB the recovery downloaded earlier.
 * You may continue go to the next section of this guide...
