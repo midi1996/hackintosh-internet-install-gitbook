@@ -42,6 +42,7 @@ For this part of the guide you'll install and prepare clover for the ramble.
        * **RealtekRTL8111** for Gigabit Realtek Cards
          * _Note: if you're not sure, get all of them, but it **may cause issues** later on._
      * _\[Exceptionally for WiFi-only users\]_ For your compatible WiFi Card:
+       * USB Wifi Users: **NO \[wont work while the install, look for the driver after the install\]**
        * for Broadcom based chips _\(DW1550-DW1560-DW1830...\)_: AirPortBcmFixUp
        * for Atheros based chips _\(AR5B95/195/97/197, based on AR9280/AR9285 SoC\)_:
          * go to [https://github.com/RehabMan/HP-ProBook-4x30s-DSDT-Patch/archive/master.zip](https://github.com/RehabMan/HP-ProBook-4x30s-DSDT-Patch/archive/master.zip)
