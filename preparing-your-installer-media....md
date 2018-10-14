@@ -65,7 +65,9 @@ After the download, open `macOS downloads/.../...` until you find RecoveryHDUpda
 2. do not open them
 3. rename the extensions from `.pkg` to `.dmg`
 4. open the image resulted \(it will be mounted\)
-5. open `Disk Utility` application \(Launchpad &gt; Other &gt;\)
+5. find `Basesystem.dmg`
+6. double click to mount it
+7. open `Disk Utility` application \(Launchpad &gt; Other &gt;\)
    1. Select View &gt; Show All devices \(above the drive list\)
    2. Select your USB device \(not the partition\)
    3. Select Partition
@@ -80,7 +82,7 @@ After the download, open `macOS downloads/.../...` until you find RecoveryHDUpda
    7. Select Restore
    8. Choose BaseSystem from the list \(it should be the image you mounted earlier\)
    9. Let it restore
-6. When done you can continue this guide...
+8. When done you can continue this guide...
 
 
 
