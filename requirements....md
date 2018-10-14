@@ -39,6 +39,7 @@ OK. So this thing requires a lot of stuff to prepare.
 ### Non-physical requirements
 
 * Python 2.7 or greater from here: [https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/)
+  * Make sure you enable "add to PATH" in the install
   * For linux users, install it if you dont have it following your distro's tools
   * For macOS users, you already have 2.7+ version installed, no need for extra tools
 * A text editor: Notepad++, Sublime Text, VSCode...
