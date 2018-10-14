@@ -40,7 +40,7 @@ For this part of the guide you'll install and prepare clover for the ramble.
        * **BCM5722D** for Broadcom BCM5722 NetXtreme and NetLink family
        * **RealtekRTL8100** for 10/100 Realtek Cards
        * **RealtekRTL8111** for Gigabit Realtek Cards
-         * _Note: if you're not sure, get all of them, but it **may cause issues** later on._
+         * _Note: if you're not sure, LOOK FOR YOUR LAN CHIPSET AND CHECK THIS AGAIN._
      * _\[Exceptionally for WiFi-only users\]_ For your compatible WiFi Card:
        * USB Wifi Users: **NO \[wont work while the install, look for the driver after the install\]**
        * for Broadcom based chips _\(DW1550-DW1560-DW1830...\)_: AirPortBcmFixUp
