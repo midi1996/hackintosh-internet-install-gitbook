@@ -18,7 +18,7 @@ Inside the same folder of gibMacOS, you'll find a cute `MakeInstall.bat` , doubl
 
 ![](.gitbook/assets/image%20%283%29.png)
 
-* Note: if you downloaded only one version of macOS, you can just paste the path for `macOS downloads` and the script will look for the pkg. If you have multiple versions, it will use the first pkg it finds, you may want, then, to specify which folder contains the pkg needed, or paste the pkg itself. \(thanks to CorpNewt for pointing that out\)
+* Note: you can just paste the path of the parent folder of the pkg file \(found in `macOS downloads` &gt; `publicrelease` \(if you used another channel, go to that channel\) `<your macOS version folder>` \) and the script will look for the pkg.
 * then paste it in the CMD window \(by Right Clicking in the window, this will paste what's in the clip board\)
 * the program will then extract and restore to the USB the recovery downloaded earlier.
 * You may continue go to the next section of this guide...
