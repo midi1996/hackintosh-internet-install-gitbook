@@ -25,7 +25,7 @@ For this part of the guide you'll install and prepare clover for the ramble.
    * Put it in drivers64UEFI
 7. Go to kexts &gt; Other
    * Go to [Goldfish64's Kext Repo](https://1drv.ms/f/s!AiP7m5LaOED-mo9XA4Ml-69cwAsikQ)
-   * Download these: _\[Note: Explore each folder and you'll a Zip file, get that Zip file, not the whole folder\]_
+   * Download these: _\[Note: Explore each folder and you'll find a Zip file, get that Zip file, not the whole folder\]_
      * FakeSMC **OR** VirtualSMC \(they both emulate an SMC system, though VSMC has quality code than FSMC, do not use both\)
      * Lilu \(an arbitrary kext patcher\)
      * WhateverGreen \(has different fixes and patches for various GPU-related issues, depends on Lilu\)
