@@ -26,6 +26,13 @@ _**In case**_ you have a USB3.0 drive look for:
 
 ```markup
 <key>KextsToPatch</key>
+<array/>
+```
+
+Change it to this and paste the necessary there:
+
+```markup
+<key>KextsToPatch</key>
 <array>
     [paste things here]
 </array>
