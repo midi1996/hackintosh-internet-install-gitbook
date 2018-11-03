@@ -135,6 +135,7 @@ _**For 10.11/El Capitan**_
    * Apple RTC - Kernel PM
    * Select the Blue Globe in Kernel Patches: add both patches
    * \[optional\] IF YOU NEED IT, choose a FakeCPU ID \(only if you're using an older macOS version on a new hardware system, eg: running Sierra on a CoffeeLake system, choose either KabyLake if it's 10.12.6, or SkyLake id =&lt;10.12.6\)
+   * \[ONLY FOR IVYBRIDGE AND SANDYBRIDGE\] Apple Intel CPU PM \(this helps with AppleIntelCPUPM kernel panic, it patches it for locked MSR 0xE2\)
 9. Under RT Variables:
    * Booter Config: 0x28
    * Csr Active Config: 0x3E7 \(some may use 0x67 for pre-High Sierra\)
