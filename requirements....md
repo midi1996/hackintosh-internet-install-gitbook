@@ -20,8 +20,8 @@ OK. So this thing requires a lot of stuff to prepare.
   * Machines with Pentium may get it working with a FakeCPUID in the clover configuration later brought up in this guide
   * Machines with Celerons may have issues
   * Machines with Atom can go get a better machine
-  * Those 3 CPU types above will not get onboard intel graphics working \(only some rare cases of new pentium CPUs, but that's not tested by me or recommended\), you will need a dedicated GPU for it.
-  * Laptop users with any of the 3 above CPU can also look for a new device, this will not work for you.
+  * Those 3 CPU types above will not get onboard intel graphics working \(only some rare cases of new Pentium CPUs, but that's not tested by me or recommended\), you will need a dedicated GPU for it.
+  * Laptop users with any of the 3 above CPU can also look for a new device, _this will not work for you_.
   * AMD machines are harder to make, thought this method has been tested with AMD but the guide for it \*may\* be released by someone else \(I wont be updating my guide since I have 0 AMD hackintosh experience\). Hence this guide will be Intel-focused.
 * A minimum of 4GB USB drive
   * Note: if you have a rooted android phone, look for DriveDroid, and make sure you have a shared internal storage \(no separate /data partition\) usually all phones made after 2012 should be like that, so if yours is fairly new it will handle it just fine.
@@ -31,7 +31,7 @@ OK. So this thing requires a lot of stuff to prepare.
   * For people who can't use ethernet but have an android phone, you can connect your android phone to WiFi and then tether it using USB, sadly, iOS users can't use that :/
 * A **fast internet connection** \(20Mbps downlink may take about an hour for the install procedure, the faster the better\).
   * Users have complained of slow or locked up downloads, that's mainly due to slow or unstable internet.
-* A **Windows environment** \(can be VM, installed on a real machine, or even WinPE\): Windows 7 SP1 or later.
+* A **Windows environment** \(can be VM, installed on a real machine, or even WinPE\): Windows 8.1 or later. 
   * Note: this guide will be updated for macOS/Linux environments 
 * Some googling skills, which a lot of you lack sadly.
 * **Brain** cells and patience and reading capabilities _**\[CRUCIAL\]**_
