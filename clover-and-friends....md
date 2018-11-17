@@ -26,20 +26,21 @@ For this part of the guide you'll install and prepare clover for the ramble.
 7. Go to kexts &gt; Other
    * Go to [Goldfish64's Kext Repo](https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw)
    * Download these: _\[Note: Explore each folder and you'll find a Zip file, get that Zip file, not the whole folder\]_
-     * FakeSMC **OR** VirtualSMC \(they both emulate an SMC system, though VSMC has quality code than FSMC, do not use both\)
-     * Lilu \(an arbitrary kext patcher\)
+     * _**FakeSMC**_ OR _**VirtualSMC**_ \(they both emulate an SMC system, though VSMC has quality code than FSMC, do not use both\)
+     * _**Lilu**_ \(an arbitrary kext patcher\)
      * WhateverGreen \(has different fixes and patches for various GPU-related issues, depends on Lilu\)
-     * USBInjectAll \(Injects USB information, configuration is needed\)
-     * AppleALC \(AppleHDA patcher for audio injection, depends on Lilu\)
-     * _\[optional, for desktop, **CRUCIAL, for laptops**\]_ VoodooPS2 \(PS2 drivers, needed for laptops\)
+     * _**USBInjectAll**_ \(Injects USB information, configuration is needed\)
+       * Pair it with **FakePCIID+FakePCIID\_XHCIMux** if you're on a 5th gen laptop or 4th motherboard and earlier. 6th gen laptops or motherboards dont need it.
+     * _**AppleALC**_ \(AppleHDA patcher for audio injection, depends on Lilu\)
+     * _\[optional, for desktop, **CRUCIAL, for laptops**\]_ _**VoodooPS2**_ \(PS2 drivers, needed for laptops\)
      * For your LAN card:
        * **AppleIntele1000** for some old cards
        * [HoRNDIS](https://github.com/midi1996/JBOG/blob/master/Extra/HoRNDIS.kext.zip?raw=true) _\[OPTIONAL IF YOU NEED NETWORK USING ANDROID\]_
        * **IntelMausiEthernet** for most Intel NICs
        * **AtherosE2200Ethernet** for some Atheros/QualcommAtheros/Killer\(some\) NICs
        * **BCM5722D** for Broadcom BCM5722 NetXtreme and NetLink family
-       * **RealtekRTL8100** for 10/100 Realtek Cards
-       * **RealtekRTL8111** for Gigabit Realtek Cards
+       * **RealtekRTL8100** for 10/100 Realtek Cards \(Realtek FE\)
+       * **RealtekRTL8111** for Gigabit Realtek Cards \(Realtek GbE\)
          * _Note: if you're not sure, LOOK FOR YOUR LAN CHIPSET AND CHECK THIS AGAIN._
      * _\[Exceptionally for WiFi-only users\]_ For your compatible WiFi Card:
        * USB Wifi Users: **NO \[wont work while the install, look for the driver after the install\]**
