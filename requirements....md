@@ -31,8 +31,8 @@ OK. So this thing requires a lot of stuff to prepare.
   * For people who can't use ethernet but have an android phone, you can connect your android phone to WiFi and then tether it using USB, sadly, iOS users can't use that :/
 * A **fast internet connection** \(20Mbps downlink may take about an hour for the install procedure, the faster the better\).
   * Users have complained of slow or locked up downloads, that's mainly due to slow or unstable internet.
-* A **Windows environment** \(can be VM, installed on a real machine, or even WinPE\): Windows 8.1 or later. 
-  * Note: this guide will be updated for macOS/Linux environments 
+* A **Proper OS Installation:**
+  * Be it macOS, Windows or Linux, make sure it's clean and properly functioning.
 * Some googling skills, which a lot of you lack sadly.
 * **Brain** cells and patience and reading capabilities _**\[CRUCIAL\]**_
 
