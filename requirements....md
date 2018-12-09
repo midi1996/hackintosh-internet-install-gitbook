@@ -51,7 +51,7 @@ OK. So this thing requires a lot of stuff to prepare.
 
 ## Dualbooting
 
-If you're thinking of dualbooting macOS and other OS, check this guide [here](https://github.com/midi1996/JBOG/blob/master/Multiboot.md), then come back and finish what you started.
+If you're thinking of dualbooting macOS and other OS, check this guide [here](https://hackintosh-multiboot.gitbook.io/), then come back and finish what you started.
 
 Now you're probably ready for the next step...
 
