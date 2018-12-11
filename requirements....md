@@ -32,7 +32,8 @@ OK. So this thing requires a lot of stuff to prepare.
 * A **fast internet connection** \(20Mbps downlink may take about an hour for the install procedure, the faster the better\).
   * Users have complained of slow or locked up downloads, that's mainly due to slow or unstable internet.
 * A **Proper OS Installation:**
-  * Be it macOS, Windows or Linux, make sure it's clean and properly functioning.
+  * Be it macOS \(a fairly recent one would be better\), Windows \(Windows 8.1 or newer\) or Linux \(with pyhton2.7 or later\), make sure it's clean and properly functioning.
+  * And 15GB of free space on the drive you're working on. On Windows, your OS disk must have 15GB free at least
 * Some googling skills, which a lot of you lack sadly.
 * **Brain** cells and patience and reading capabilities _**\[CRUCIAL\]**_
 
