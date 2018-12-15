@@ -40,7 +40,7 @@ Change it to this and paste the necessary there:
 
 and replace `[paste things here]` with this: _\[Note: `[paste things here]` doesnt exist in the configuration file\]_
 
-_**For 10.14/Mojave**_
+_**For 10.14/Mojave \[probably will not work as it changes with each Mojave update\]**_
 
 ```markup
 			<dict>
