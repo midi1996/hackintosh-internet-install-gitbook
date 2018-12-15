@@ -21,7 +21,7 @@ For this part of the guide you'll install and prepare clover for the ramble.
 6. for UEFI users:
    * Open `drivers64UEFI`, _deled_ everything inside
    * go to `drivers-off > drivers64UEFI`, copy ApfsDriverLoader, AppleImageLoader and AptioMemoryFix to `drivers64UEFI` that we emptied earlier.
-   * Download [HFSPlus.efi](https://github.com/JrCs/CloverGrowerPro/blob/master/Files/HFSPlus/X64/HFSPlus.efi)
+   * Download [HFSPlus.efi](https://github.com/JrCs/CloverGrowerPro/blob/master/Files/HFSPlus/X64/HFSPlus.efi) \(NOW it's included inside `drivers-off > drivers64UEFI`\)
    * Put it in drivers64UEFI
 7. Go to kexts &gt; Other
    * Go to [Goldfish64's Kext Repo](https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw)
