@@ -22,100 +22,22 @@ Then open the file with a text editor \(check above\), and add these with the bo
 
 Save the file, rename and copy the resulting plist file and paste it in CLOVER \(partition\)&gt; EFI &gt; CLOVER and replace the one already there.
 
-_**In case**_ you have a USB3.0 drive look for:
+### Tips:
 
-```markup
-<key>KextsToPatch</key>
-<array/>
-```
-
-Change it to this and paste the necessary there:
-
-```markup
-<key>KextsToPatch</key>
-<array>
-    [paste things here]
-</array>
-```
-
-and replace `[paste things here]` with this: _\[Note: `[paste things here]` doesnt exist in the configuration file\]_
-
-_**For 10.14/Mojave \[probably will not work as it changes with each Mojave update\]**_
-
-```markup
-			<dict>
-				<key>Comment</key>
-				<string>disable port limit in XHCI kext (credit PMHeart)</string>
-				<key>MatchOS</key>
-				<string>10.14.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCI</string>
-				<key>Find</key>
-				<data>g/sPD4MDBQAA</data>
-				<key>Replace</key>
-				<data>g/sPkJCQkJCQ</data>
-			</dict>
-```
-
-_**For 10.13/High Sierra \(10.13.6\)**_
-
-```markup
-			<dict>
-				<key>Comment</key>
-				<string>disable port limit in XHCI kext (credit RehabMan, based prior PMHeart patch)</string>
-				<key>MatchOS</key>
-				<string>10.13.6</string>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCI</string>
-				<key>Find</key>
-				<data>g32IDw+DpwQAAA==</data>
-				<key>Replace</key>
-				<data>g32ID5CQkJCQkA==</data>
-			</dict>
-```
-
-_**For 10.12/Sierra**_
-
-```markup
-			<dict>
-				<key>Comment</key>
-				<string>change 15 port limit to 26 in XHCI kext</string>
-				<key>MatchOS</key>
-				<string>10.12.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCIPCI</string>
-				<key>Find</key>
-				<data>g710////EA==</data>
-				<key>Replace</key>
-				<data>g710////Gw==</data>
-			</dict>
-```
-
-_**For 10.11/El Capitan**_
-
-```markup
-			<dict>
-				<key>Comment</key>
-				<string>change 15 port limit to 26 in XHCI kext</string>
-				<key>MatchOS</key>
-				<string>10.11.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCIPCI</string>
-				<key>Find</key>
-				<data>g72M/v//EA==</data>
-				<key>Replace</key>
-				<data>g72M/v//Gw==</data>
-			</dict>
-```
+* _**In case**_ you have a USB3.0 drive, add `-uia_exclude_hs` to the `Boot > Arguments`, this will disable your HS ports from your USB3.0 ports \(basically, you will not be able to use USB2.0 devices on those ports.\)
+* _**In case**_ you need USB2.0 ports for mouse/keyboard \(for people with I2C touchpads or broken keyboards\) and only have USB3.0 drive, either: 
+  * Use a USB2.0 cable extender \(this will force the USB3.0 flash drive to be on USB2.0 mode\)
+  * Look for a USB2.0 drive
+* For people with Broadwell \(5th Gen Intel CPUs\) and older, you have two sets of USB Controllers: EHCI and XHCI. You will only use XHCI controller since the EHCI controller will be disabled. How should you know which port is connected to which? Look for USB3.0 ports \(named SS USB, has 4+5 sets of pins or is blue\) and plug your USB there.
 
 ## For deskies:
 
 1. Open [CCC](http://cloudclovereditor.altervista.org/)\[link\] : Cloud Clover Configurator: an open-source web-based clover configurator, and better than the app in some ways.
 2. Create a new config
 3. Under ACPI:
-   * if you have a _**3rd Gen intel Core or newer**_: select _Generate Plugin Type_ under SSDT
-   * if you have a _**2nd Gen intel Core or older**_: select _Generate P-States and C-States_ \[Note: you'll need to make an SSDT after the installing macOS for better PM\]
-   * Select `FixRTC` `FixTMR` `FixIPIC` under `DSDT` &gt; `Fixes`
+   * if you have a _**4rd Gen intel Core or newer**_: select _Generate Plugin Type_ under SSDT
+   * if you have a _**3nd Gen intel Core or older**_: You **must** make a CPUPM SSDT _after_ the install \(check the Laptop PM link in Posty Posty\)
+   * \[May cause issues, select them after the install\] Select `FixRTC` `FixTMR` `FixIPIC` under `DSDT` &gt; `Fixes`
    * In the bottom right of that section: `Fix ACPI Tables Headers` and `Auto Merge SSDTs`
    * \[For people with iGPU\] Select the Blue Globe under Patches and choose GFX0 to IGPU
 4. Under Boot:
@@ -124,13 +46,18 @@ _**For 10.11/El Capitan**_
 5. Under Devices:
    * USB: Inject - Add Clock ID - Fix Ownership
    * Audio: Inject : 1 \(type it inside Layout ID\)
+   * **\[MUST\]** GPU configuration: 
+     * [Haswell](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/haswell#devices)
+     * [SkyLake](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/skylake#devices)
+     * [KabyLake](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/kaby-lake#devices)
+     * [CoffeeLake](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake#devices)
+     * Note: You'll see Clover Configurator pictures, it's close to what you'll see on CCE. HOWEVER, I recommend you do some manual editing in case something doesnt work.
 6. Under GUI:
    * Scan Options: Custom - Scan Entries - Scan Tools - Scan Kernel: Disabled - Scan Legacy: Disabled.
    * \[optional\] Mouse: Enabled
    * \[optional\] Screen Resolution - Language - Theme \(I recommend Embedded Theme Type: Dark\)
 7. Under Graphics:
-   * If you have Intel HD device, you can try Inject &gt; Intel, if it doesn't work, use a bogus fakeID back under Device sections, under Intel GFX = 0x12345678. Usually intel works OOB on many systems.
-   * If you have AMD/Nvidia, **DO NOT TICK INJECT** \(unless you're on Kepler or older on Nvidia, no idea about AMD\).
+   * Keep it CLEAN, nothing here.
 8. Under Kernel And Kext Patches:
    * Apple RTC - Kernel PM
    * Select the Blue Globe in Kernel Patches: add both patches
