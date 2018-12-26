@@ -22,8 +22,21 @@ Now that's installed, here are some useful links:
 
 {% tab title="Desktops" %}
 * **/u/corpnewt vanilla guide:** [https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide)
+* **\[GPU\] WhateverGreen Patching:**
+  * \[TMX\]: [https://www.tonymacx86.com/threads/guide-intel-framebuffer-patching-using-whatevergreen.256490/](https://www.tonymacx86.com/threads/guide-intel-framebuffer-patching-using-whatevergreen.256490/)
+  * \[IM\]: [https://www.insanelymac.com/forum/topic/334899-intel-framebuffer-patching-using-whatevergreen/](https://www.insanelymac.com/forum/topic/334899-intel-framebuffer-patching-using-whatevergreen/)
 {% endtab %}
 {% endtabs %}
 
+For either:
+
+* USBMap:
+  * Map your USB ports so that you dont need the USB kext patch \(and may probably fix sleep/wake for some\)
+    * Guide \[first\]: [https://usb-map.gitbook.io/project/](https://usb-map.gitbook.io/project/)
+    * Tool \[second\]: [https://github.com/corpnewt/USBMap](https://github.com/corpnewt/USBMap)
+* WhateverGreen Patching:
+  * \[TMX, has more activity\]: [https://www.tonymacx86.com/threads/guide-intel-framebuffer-patching-using-whatevergreen.256490/](https://www.tonymacx86.com/threads/guide-intel-framebuffer-patching-using-whatevergreen.256490/)
+  * \[IM, eh?\]: [https://www.insanelymac.com/forum/topic/334899-intel-framebuffer-patching-using-whatevergreen/](https://www.insanelymac.com/forum/topic/334899-intel-framebuffer-patching-using-whatevergreen/)
+* 
 /r/Hackintosh Discord Server: [http://discord.io/hackintosh](http://discord.io/hackintosh) _\[Dont you dare PM me\]_
 

@@ -33,6 +33,17 @@ So this procedure goes mainly like this
 
 This guide will \*probably\* not contain any post-install guide, as it's documented on the [Vanilla Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/). This guide is for Pre-install preparation and Install, you will need to go to the Vanilla Guide to finish the rest for Desktop users, and for laptop users you'll have to continue [here](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/#post-917904). This will be brought up at the end of this guide.
 
+### Credits:
+
+* Apple \(for their OS and the recovery images\)
+* /u/CorpNewt \(for his tool and hard work on making those scripts\)
+* Rehabman \(for his drivers, configs, guides and other hack related stuff\)
+* acidanthera team \(for all the driver and tools that made hackintoshing 10x easier than 5 years ago\)
+* Clover team \(for the boot manager\)
+* cVad \(for his BDU tool in my previous guide and idea\)
+* kylon \(for CCE\)
+* And other people that helped directly or indirectly into making this happen \(remind me if I forget yo\)
+
 Good luck :\)...
 
 
