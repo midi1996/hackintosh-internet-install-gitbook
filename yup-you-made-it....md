@@ -8,7 +8,7 @@ To start the installation:
 2. plug the usb
 3. start the computer into the boot menu \(refer to your motherboards manual or google\)
 4. select your USB device \(make sure it says UEFI or PX before it, some motherboards with only legacy may not find UEFI, it's fine, tho I'm not supporting Legacy booting atm\).
-5. select Boot macOS Recovery from ...
+5. select Boot macOS Recovery from ... \(or Boot macOS Install from OS X Base System, this changes depends on the release chosen\)
 6. wait for the wall of text to make you feel like a _hackerman_
    * Note: if it gets stuck with a Stop sign, change your USB drive's port, use a USB2.0 drive, or use a USB2.0 extension cord.
    * Note2: if you get a black screen at then end of the installer on Intel HD GPUs, reboot to Clover, Press `O` \(letter\), go to Graphics Injection, change FakeID to 0x12345678, go back and boot. You will have to do this on every reboot until you get to the desktop. The Graphics will be slow and sluggish, fix it asap. Use google then.
