@@ -24,15 +24,18 @@ Save the file, rename and copy the resulting plist file and paste it in CLOVER \
 
 ### Tips:
 
-* _**In case**_ you have a USB3.0 drive, add `-uia_exclude_hs` to the `Boot > Arguments`, this will disable your HS ports from your USB3.0 ports \(basically, you will not be able to use USB2.0 devices on those ports.\)
+* _**In case**_ you have a USB3.0 drive, add `-uia_exclude_hs` to the `Boot > Arguments`, this will disable your HS ports from your USB3.0 ports \(basically, you will not be able to use USB2.0 devices on those ports\)
+  * However, **if you're using a USB mouse/keyboard** you **must not** use that argument, instead, fetch for a USB2.0 cable extender or a USB2.0 _drive_ and boot from it.
 * _**In case**_ you need USB2.0 ports for mouse/keyboard \(for people with I2C touchpads or broken keyboards\) and only have USB3.0 drive, either: 
   * Use a USB2.0 cable extender \(this will force the USB3.0 flash drive to be on USB2.0 mode\)
   * Look for a USB2.0 drive
-* For people with Broadwell \(5th Gen Intel CPUs\) and older, you have two sets of USB Controllers: EHCI and XHCI. You will only use XHCI controller since the EHCI controller will be disabled. How should you know which port is connected to which? Look for USB3.0 ports \(named SS USB, has 4+5 sets of pins or is blue\) and plug your USB there.
+* For people with **Broadwell \(5th Gen Intel CPUs\) and older,** you have two sets of USB Controllers: _EHCI_ and _XHCI_. You will only use **XHCI** controller since the **EHCI** controller will be disabled. How should you know which port is connected to which? Look for USB3.0 ports \(named SS USB, has 4+5 sets of pins or is blue, and probably have a SS logo/name\) and plug your USB there.
 
 ## For deskies:
 
-1. Open [CCC](http://cloudclovereditor.altervista.org/)\[link\] : Cloud Clover Configurator: an open-source web-based clover configurator, and better than the app in some ways.
+**NOTE:** _**This is a brief and limited guiding to get booting and running. This is not meant to be the final config. Check the link at the end if this part to understand what's going on.**_
+
+1. Open [CCE](http://cloudclovereditor.altervista.org/) \(it's a link\): Cloud Clover Editor: an open-source web-based clover editor, and better than the app in some ways.
 2. Create a new config
 3. Under ACPI:
    * if you have a _**4rd Gen intel Core or newer**_: select _Generate Plugin Type_ under SSDT
@@ -51,7 +54,7 @@ Save the file, rename and copy the resulting plist file and paste it in CLOVER \
      * [SkyLake](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/skylake#devices)
      * [KabyLake](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/kaby-lake#devices)
      * [CoffeeLake](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake#devices)
-     * Note: You'll see Clover Configurator pictures, it's close to what you'll see on CCE. HOWEVER, I recommend you do some manual editing in case something doesnt work.
+     * Note: You'll see Clover Configurator pictures, it's close to what you'll see on CCE. HOWEVER, I recommend you do some manual editing in case something doesn't work.
 6. Under GUI:
    * Scan Options: Custom - Scan Entries - Scan Tools - Scan Kernel: Disabled - Scan Legacy: Disabled.
    * \[optional\] Mouse: Enabled
@@ -90,4 +93,6 @@ Save the file, rename and copy the resulting plist file and paste it in CLOVER \
 16. Download
 17. Save
 18. Rename and copy the resulting plist file and paste it in CLOVER \(partition\)&gt; EFI &gt; CLOVER and replace the one already there.
+
+NOTE: to understand any of these options you **must** read this guide: [https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/). This guide gathers information and explanations for most of the hackintoshing process. Use it as an information base and guide if needed. 
 
