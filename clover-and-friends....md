@@ -7,9 +7,24 @@ description: Basically configuring it
 For this part of the guide you'll install and prepare clover for the ramble.
 
 1. Download the latest [Clover LZMA](https://github.com/Dids/clover-builder/releases/latest) from Dids' repo \(thanks bb ❤️\)
-   1. For Windows, use 7zip to extract the LZMA and TAR inside it until you get the iso
+   1. For Windows, ~~use 7zip to extract the LZMA and TAR inside it until you get the iso~~
+      1. No need to get it anymore, MakeInstaller will take care of clover installing, go to **Step 4** directly
    2. For linux, use p7zip or file roller or whatever you use, to extract the LZMA and TAR inside it until you get the iso
    3. For macOS, use `keka` \(google it\) or `The Unarchiver` \(AppStore, Free\) to extract the LZMA and TAR inside it until you get to the iso
+      1. _Note for macOS users who want to use legacy on the destination machine:_
+         1. If you're booting from UEFI on the destination go to **step 2: Mount the ISO** \(do not follow this note\)
+         2. Download the pkg from the source above
+         3. Open the installer
+         4. Select the destination as "CLOVER" \(USB\)
+         5. Select Customize
+         6. Choose:
+            1. Boot Sectors : Install boot0ss in MBR
+            2. Clover for BIOS \(legacy\) booting: Clover EFI 64-bits SATA
+            3. Themes: \(a theme, choose clovy\)
+            4. BIOS Drivers, 64 bit: ApfsDriverLoader - AppleImageLoader
+            5. Uncheck the rest of there is anything checked
+         7. Install
+         8. Go to **Step 7** bellow
 2. Mount the ISO
    1. On windows 10, double click or Open With &gt; Windows Explorer
    2. On linux, use `mount` command with `-o loop,ro` or with `gnome-disks` by right-clicking the iso &gt; mount image 
@@ -17,12 +32,17 @@ For this part of the guide you'll install and prepare clover for the ramble.
 3. Copy the EFI folder from the ISO to the CLOVER USB
    1. you should have CLOVER \(USB\) &gt; EFI \(folder\) &gt; CLOVER & BOOT
 4. Open CLOVER &gt; EFI &gt; CLOVER
-5. delete `doc` and `OEM` and `drivers64` \(for UEFI users\), or `drivers64UEFI` \(for legacy users\) and `drivers32` and `drivers32UEFI`.
-6. for UEFI users:
-   * Open `drivers64UEFI`, _deled_ everything inside
-   * go to `drivers-off > drivers64UEFI`, copy ApfsDriverLoader, AppleImageLoader and AptioMemoryFix to `drivers64UEFI` that we emptied earlier.
-   * Download [HFSPlus.efi](https://github.com/JrCs/CloverGrowerPro/blob/master/Files/HFSPlus/X64/HFSPlus.efi) \(NOW it's included inside `drivers-off > drivers64UEFI`\)
-   * Put it in drivers64UEFI
+5. delete `doc` and `OEM` and 
+   1. UEFI users, delete:
+      1. `drivers64`
+   2. Legacy users, delete:
+      1. `drivers64UEFI`
+6. Clover Drivers \(EFI drivers, not to be confused with kexts, which are macOS drivers\)
+   1. for UEFI users:
+      * Open `drivers64UEFI`, _deled_ everything inside
+      * go to `drivers-off > drivers64UEFI`, copy ApfsDriverLoader, AppleImageLoader,  AptioMemoryFix and HFSPlus to `drivers64UEFI` that we emptied earlier.
+   2. for Legacy users:
+      * go to `drivers-off > drivers64UEFI`, copy ApfsDriverLoader, AppleImageLoader and HFSPlus to `drivers64`
 7. Go to kexts &gt; Other
    * Go to [Goldfish64's Kext Repo](https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw)
    * Download these: _\[Note: Explore each folder and you'll find a Zip file, get that Zip file, not the whole folder\]_
@@ -56,6 +76,7 @@ For this part of the guide you'll install and prepare clover for the ramble.
 8. Extract every zip
    * Note: a kexts is a macOS driver, and it's in a form of a `a_folder_name.kext`, on windows it will show as a folder, on macOS it will show as a file.
 9. now copy VirtualSMC.**kext** \(or FakeSMC.kext\) - Lilu.kext - WhateverGreen.kext - USBInjectAll.kext - AppleALC.kext - \[your\_ethernet\_driver\].kext \(and any extra kext you needed from above\) and put it in _**CLOVER \(USB\) &gt; EFI &gt; CLOVER &gt; kexts &gt; Other**_. _\[skip the sensor kexts, they may cause kernel panics, aka KP. For VirtualSMC, copy over SMCProcessor if you want to, leave the rest out\]_
+   1. _Basically what you should have in the end: \`_`- VirtualSMC.kext - USBInjectAll.kext - AppleALC.kext - Lilu.kext - WhateverGreen.kext - VoodooPS2Controller.kext (laptop users) - <SomeEthernetDriver>.kext`
 10. now you're mostly done with Clover and macOS installer preparation.
 
 Extra note for X299 people:

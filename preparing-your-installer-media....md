@@ -20,7 +20,10 @@ Inside the same folder of gibMacOS, you'll find a cute `MakeInstall.bat` , doubl
 
 * Note: you can just paste the path of the parent folder of the pkg file \(found in `macOS downloads` &gt; `publicrelease` \(if you used another channel, go to that channel\) `<your macOS version folder>` \) and the script will look for the pkg.
 * then paste it in the CMD window \(by Right Clicking in the window, this will paste what's in the clip board\)
-* the program will then extract and restore to the USB the recovery downloaded earlier.
+* the program will then:
+  * extract and restore to the USB the recovery downloaded earlier
+  * download and install clover \(unconfigured\) to the USB
+  * install legacy boot sectors for Legacy users \(wont affect UEFI users\)
 * You may continue go to the next section of this guide...
 
 ## Loonix \(Linux\)
