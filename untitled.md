@@ -1,6 +1,6 @@
 # Downloading the Recovery HD image...
 
-So after cloning/downloading `gibMacOS` \(that will be refereed as gOS later on\), you'll have to open the the folder where it is \(or `cd` to it if you clone it with git\). If you're using macOS or Linux, you should know how to `cd` to it through your preferred Terminal emulator. If you're a **Windows** user, follow these instructions to get to the command line inside the folder.
+After cloning/downloading `gibMacOS` \(that will be refereed as gOS later on\), you'll have to open the the folder where it is \(or `cd` to it if you clone it with git\). If you're using macOS or Linux, you should know how to `cd` to it through your preferred Terminal emulator. If you're a **Windows** user, follow these instructions to get to the command line inside the folder.
 
 * Open Command Prompt/PowerShell and `cd` to where it is.
 * OR open the folder where it is, press `Files` &gt; `Open Windows PowerShell`
@@ -21,5 +21,5 @@ Now that you're inside the command prompt/powershell/terminal, we'll use gibMacO
    2. Backup any data \*from\* it
    3. Format it \(it will be formatted anyways later on\)
 
-Now that's downloaded let's move on to the USB drive making...
+Now that's downloaded, let's move on to the USB drive making...
 

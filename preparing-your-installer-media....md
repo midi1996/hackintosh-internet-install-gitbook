@@ -38,12 +38,12 @@ In terminal:
       1. partition number: keep blank for default
       2. first sector: keep blank for default
       3. last sector: `+200M` to create a 200MB partition that will be named later on CLOVER
-      4. Hex code or GUID: `0700` for Microsoft basic data
+      4. Hex code or GUID: `0700` for Microsoft basic data partition type
    4. send `n`
       1. partition number: keep blank for default
       2. first sector: keep blank for default
       3. last sector: keep black for default \(or you can make it `+3G` if you want to partition further the rest of the USB\)
-      4. Hex code or GUID: `ab00` for Recovery HD partition scheme
+      4. Hex code or GUID: `af00` for Apple HFS/HFS+ partition type
    5. send `w`
       1. Confirm with `y`
    6. Close `gdisk` by sending `q`
@@ -62,10 +62,10 @@ In terminal:
 
 After the download, open `macOS downloads/.../...` until you find RecoveryHDUpdate.pkg or RecoveryHDMetaDmg.pkg \(enable file name extensions in Finder under Finder &gt; Preferences &gt; Advanced\).
 
-1. locate the pkgs
-2. do not open them
-3. rename the extensions from `.pkg` to `.dmg`
-4. open the image resulted \(it will be mounted\)
+1. locate the pkg
+2. do not open it
+3. rename the extension from `.pkg` to `.dmg`
+4. open the image \(it will be mounted\)
 5. find `Basesystem.dmg`
 6. double click to mount it
 7. open `Disk Utility` application \(Launchpad &gt; Other &gt;\)

@@ -49,12 +49,13 @@ Save the file, rename and copy the resulting plist file and paste it in CLOVER \
 5. Under Devices:
    * USB: Inject - Add Clock ID - Fix Ownership
    * Audio: Inject : 1 \(type it inside Layout ID\)
-   * **\[MUST\]** GPU configuration: 
+   * **\[MUST\]** Intel GPU configuration: 
      * [Haswell](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/haswell#devices)
      * [SkyLake](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/skylake#devices)
      * [KabyLake](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/kaby-lake#devices)
      * [CoffeeLake](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake#devices)
-     * Note: You'll see Clover Configurator pictures, it's close to what you'll see on CCE. HOWEVER, I recommend you do some manual editing in case something doesn't work.
+       * **Note**: You'll see Clover Configurator pictures, it's close to what you'll see on CCE. HOWEVER, I recommend you do some manual editing in case something doesn't work.
+       * **Note 2**: If you're using Novideo \(_NVIDIA_\) or AyyMD \(_AMD_\) GPU, you do not need this intel part, **skip it,** _however,_ if you want QuickSync functionality \(usually on AMD + Intel GPUs mix\), check the above links to set a _connector-less_ iGPU setup.
 6. Under GUI:
    * Scan Options: Custom - Scan Entries - Scan Tools - Scan Kernel: Disabled - Scan Legacy: Disabled.
    * \[optional\] Mouse: Enabled

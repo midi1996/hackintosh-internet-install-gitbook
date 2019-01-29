@@ -19,7 +19,7 @@ OK. So this thing requires a lot of stuff to prepare.
 * Your target computer **MUST** be an Intel Core/Xeon machine:
   * Machines with Pentium may get it working with a FakeCPUID in the clover configuration later brought up in this guide
   * Machines with Celerons may have issues
-  * Machines with Atom can go get a better machine
+  * Machines with Atom can use that to get a better machine
   * Those 3 CPU types above will not get onboard intel graphics working \(only some rare cases of new Pentium CPUs, but that's not tested by me or recommended\), you will need a dedicated GPU for it.
   * Laptop users with any of the 3 above CPU can also look for a new device, _this will not work for you_.
   * AMD machines are harder to make, thought this method has been tested with AMD but the guide for it \*may\* be released by someone else \(I wont be updating my guide since I have 0 AMD hackintosh experience\). Hence this guide will be Intel-focused.
@@ -32,15 +32,18 @@ OK. So this thing requires a lot of stuff to prepare.
 * A **fast internet connection** \(20Mbps downlink may take about an hour for the install procedure, the faster the better\).
   * Users have complained of slow or locked up downloads, that's mainly due to slow or unstable internet.
 * A **Proper OS Installation:**
-  * Be it macOS \(a fairly recent one would be better\), Windows \(Windows 8.1 or newer\) or Linux \(with pyhton2.7 or later\), make sure it's clean and properly functioning.
-  * And 15GB of free space on the drive you're working on. On Windows, your OS disk must have 15GB free at least
+  * Be it:
+    * macOS \(a fairly recent one would be better\)
+    * Windows \(Windows 10, 1703 or newer\)
+    * Linux \(with pyhton2.7 or later\), make sure it's clean and properly functioning.
+  * And **15GB** of free space on the drive you're working on. On Windows, your OS disk must have 15GB free at least
 * Some googling skills, which a lot of you lack sadly.
 * **Brain** cells and patience and reading capabilities _**\[CRUCIAL\]**_
 
 ### Non-physical requirements
 
-* Python 2.7 or greater from here: [https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/)
-  * Make sure you enable "add to PATH" in the install
+* Python 2.7 or greater:
+  * For Windows, get it from [https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/) and make sure you enable "add to PATH" in the install
   * For linux users, install it if you dont have it following your distro's tools
   * For macOS users, you already have 2.7+ version installed, no need for extra tools
 * A text editor: Notepad++, Sublime Text, VSCode...
