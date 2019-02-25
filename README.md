@@ -35,7 +35,9 @@ This guide will \***probably**\* not contain any post-install guide, as it's doc
 
 ## Before you even start:
 
-If you don't know your own hw, and have no clue how to find it, hackintosh might not be for you. ~ Everyone. 
+> If you don't know your own hw, and have no clue how to find it, hackintosh might not be for you.
+
+                                                                                                                                                          ~ Everyone. 
 
 This is not a very welcoming community for people who do not want to do some self-study and learn from other's findings and instead wait for someone to spoon-feed them information and make things work for them. Read The Fucking Manual and work your way through it and do some intense googling.
 
