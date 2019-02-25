@@ -33,6 +33,14 @@ So this procedure goes mainly like this
 
 This guide will \***probably**\* not contain any post-install guide, as it's documented on the [Vanilla Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/). This guide is for Pre-install preparation and Install, you will need to go to the Vanilla Guide to finish the rest for Desktop users, and for laptop users you'll have to continue [here](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/#post-917904). This will be brought up at the end of this guide.
 
+## Before you even start:
+
+If you don't know your own hw, and have no clue how to find it, hackintosh might not be for you. ~ Everyone. 
+
+This is not a very welcoming community for people who do not want to do some self-study and learn from other's findings and instead wait for someone to spoon-feed them information and make things work for them. Read The Fucking Manual and work your way through it and do some intense googling.
+
+**READ THE GUIDE FULLY BEFORE YOU ASK.** Most probably your question has already been answered, and if not, someone did ask it and it's on the net somewhere.
+
 ### Credits:
 
 * Apple \(for their OS and the recovery images\)

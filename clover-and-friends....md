@@ -8,7 +8,7 @@ For this part of the guide you'll install and prepare clover for the ramble.
 
 1. Download the latest [Clover LZMA](https://github.com/Dids/clover-builder/releases/latest) from Dids' repo \(thanks bb ❤️\)
    1. For Windows, ~~use 7zip to extract the LZMA and TAR inside it until you get the iso~~
-      1. No need to get it anymore, MakeInstaller will take care of clover installing, go to **Step 4** directly
+      1. No need to get it anymore, MakeInstaller will take care of clover installing, go to **Step 4: Open CLOVER** directly
    2. For linux, use p7zip or file roller or whatever you use, to extract the LZMA and TAR inside it until you get the iso
    3. For macOS, use `keka` \(google it\) or `The Unarchiver` \(AppStore, Free\) to extract the LZMA and TAR inside it until you get to the iso
       1. _Note for macOS users who want to use legacy on the destination machine:_
