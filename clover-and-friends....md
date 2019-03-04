@@ -39,7 +39,7 @@ For this part of the guide you'll install and prepare clover for the ramble.
       1. `drivers64UEFI`
 6. Clover Drivers \(EFI drivers, not to be confused with kexts, which are macOS drivers\)
    1. for UEFI users:
-      * Open `drivers64UEFI`, _deled_ everything inside
+      * Open `drivers64UEFI`, _delete_ everything inside
       * go to `drivers-off > drivers64UEFI`, copy ApfsDriverLoader, AppleImageLoader,  AptioMemoryFix and HFSPlus to `drivers64UEFI` that we emptied earlier.
    2. for Legacy users:
       * go to `drivers-off > drivers64UEFI`, copy ApfsDriverLoader, AppleImageLoader and HFSPlus to `drivers64`
