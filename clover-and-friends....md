@@ -11,7 +11,7 @@ For this part of the guide you'll install and prepare clover for the ramble.
       1. No need to get it anymore, MakeInstaller will take care of clover installing, go to **Step 4: Open CLOVER** directly
    2. For linux, use p7zip or file roller or whatever you use, to extract the LZMA and TAR inside it until you get the iso
    3. For macOS, use `keka` \(google it\) or `The Unarchiver` \(AppStore, Free\) to extract the LZMA and TAR inside it until you get to the iso
-      1. _Note for macOS users who want to use legacy on the destination machine:_
+      1. _**Note for macOS users** who want to use **legacy** on the destination machine:_
          1. If you're booting from UEFI on the destination go to **step 2: Mount the ISO** \(do not follow this note\)
          2. Download the pkg from the source above
          3. Open the installer
@@ -40,9 +40,9 @@ For this part of the guide you'll install and prepare clover for the ramble.
 6. Clover Drivers \(EFI drivers, not to be confused with kexts, which are macOS drivers\)
    1. for UEFI users:
       * Open `drivers64UEFI`, _deled_ everything inside
-      * go to `drivers-off > drivers64UEFI`, copy ApfsDriverLoader, AppleImageLoader,  AptioMemoryFix and HFSPlus to `drivers64UEFI` that we emptied earlier.
+      * go to `drivers-off > drivers64UEFI`, copy **ApfsDriverLoader**, **AppleImageLoader**,  **AptioMemoryFix** and **HFSPlus** to `drivers64UEFI` that we emptied earlier.
    2. for Legacy users:
-      * go to `drivers-off > drivers64UEFI`, copy ApfsDriverLoader, AppleImageLoader and HFSPlus to `drivers64`
+      * go to `drivers-off > drivers64UEFI`, copy **ApfsDriverLoader**, **AppleImageLoader** and **HFSPlus** to `drivers64`
 7. Go to kexts &gt; Other
    * Go to [Goldfish64's Kext Repo](https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw)
    * Download these: _\[Note: Explore each folder and you'll find a Zip file, get that Zip file, not the whole folder\]_
@@ -50,7 +50,7 @@ For this part of the guide you'll install and prepare clover for the ramble.
      * _**Lilu**_ \(an arbitrary kext patcher\)
      * WhateverGreen \(has different fixes and patches for various GPU-related issues, depends on Lilu\)
      * _**USBInjectAll**_ \(Injects USB information, configuration is needed\)
-       * Pair it with **FakePCIID+FakePCIID\_XHCIMux** if you're on a 5th gen laptop or 4th motherboard and earlier. 6th gen laptops or motherboards dont need it.
+       * Pair it with **FakePCIID+FakePCIID\_XHCIMux** if you're on a 5th gen laptop or 4th motherboard and earlier. 6th gen laptops or motherboards and later dont need it.
      * _**AppleALC**_ \(AppleHDA patcher for audio injection, depends on Lilu\)
      * _\[optional, for desktop, **CRUCIAL, for laptops**\]_ _**VoodooPS2**_ \(PS2 drivers, needed for laptops\)
      * For your LAN card:
@@ -76,10 +76,10 @@ For this part of the guide you'll install and prepare clover for the ramble.
 8. Extract every zip
    * Note: a kexts is a macOS driver, and it's in a form of a `a_folder_name.kext`, on windows it will show as a folder, on macOS it will show as a file.
 9. now copy VirtualSMC.**kext** \(or FakeSMC.kext\) - Lilu.kext - WhateverGreen.kext - USBInjectAll.kext - AppleALC.kext - \[your\_ethernet\_driver\].kext \(and any extra kext you needed from above\) and put it in _**CLOVER \(USB\) &gt; EFI &gt; CLOVER &gt; kexts &gt; Other**_. _\[skip the sensor kexts, they may cause kernel panics, aka KP. For VirtualSMC, copy over SMCProcessor if you want to, leave the rest out\]_
-   1. _Basically what you should have in the end: \`_`- VirtualSMC.kext - USBInjectAll.kext - AppleALC.kext - Lilu.kext - WhateverGreen.kext - VoodooPS2Controller.kext (laptop users) - <SomeEthernetDriver>.kext`
+   1. _Basically what you should have in the end:_ `- VirtualSMC.kext - USBInjectAll.kext - AppleALC.kext - Lilu.kext - WhateverGreen.kext - VoodooPS2Controller.kext (laptop users) - <SomeEthernetDriver>.kext`
 10. now you're mostly done with Clover and macOS installer preparation.
 
-Extra note for X299 people:
+**Extra note for X299 people:**
 
 You need to add `GenericUSBXHCI` kext from the kext repository above, along VoodooTSCSync if you can't enable Core Syncing in your firmware, more on that [here](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/gathering-kexts#usb) \[USB\] and [here](https://www.tonymacx86.com/threads/how-to-build-your-own-imac-pro-successful-build-extended-guide.229353/) \[Go to the BIOS section, as it's the most important part of that whole talk\].
 
