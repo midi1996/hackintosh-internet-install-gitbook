@@ -1,5 +1,5 @@
 ---
-description: READ THIS NOW!
+description: 'Step 2: READ THIS NOW!'
 ---
 
 # Config.plist Basics...

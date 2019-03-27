@@ -1,3 +1,7 @@
+---
+description: 'Step 3: Configuring Clover'
+---
+
 # Clover and friends \[part 2\]...
 
 Now your USB has clover and a macOS recovery. For the second part we will create a config.plist.
