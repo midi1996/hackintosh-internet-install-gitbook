@@ -7,8 +7,7 @@ description: Basically configuring it
 For this part of the guide you'll install and prepare clover for the ramble.
 
 1. Download the latest [Clover LZMA](https://github.com/Dids/clover-builder/releases/latest) from Dids' repo \(thanks bb ❤️\)
-   1. For Windows, ~~use 7zip to extract the LZMA and TAR inside it until you get the iso~~
-      1. No need to get it anymore, MakeInstaller will take care of clover installing, go to **Step 4: Open CLOVER** directly
+   1. For Windows, go to **Step 4: Open CLOVER** directly
    2. For linux, use p7zip or file roller or whatever you use, to extract the LZMA and TAR inside it until you get the iso
    3. For macOS, use `keka` \(google it\) or `The Unarchiver` \(AppStore, Free\) to extract the LZMA and TAR inside it until you get to the iso
       1. _**Note for macOS users** who want to use **legacy** on the destination machine:_
@@ -26,9 +25,8 @@ For this part of the guide you'll install and prepare clover for the ramble.
          7. Install
          8. Go to **Step 7** bellow
 2. Mount the ISO
-   1. On windows 10, double click or Open With &gt; Windows Explorer
-   2. On linux, use `mount` command with `-o loop,ro` or with `gnome-disks` by right-clicking the iso &gt; mount image 
-   3. On macOS, double click
+   1. On linux, use `mount` command with `-o loop,ro` or with `gnome-disks` by right-clicking the iso &gt; mount image 
+   2. On macOS, double click
 3. Copy the EFI folder from the ISO to the CLOVER USB
    1. you should have CLOVER \(USB\) &gt; EFI \(folder\) &gt; CLOVER & BOOT
 4. Open CLOVER &gt; EFI &gt; CLOVER
