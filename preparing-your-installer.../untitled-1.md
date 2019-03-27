@@ -5,7 +5,7 @@ After cloning/downloading `gibMacOS` \(that will be refereed as gOS later on\), 
 * Open Command Prompt/PowerShell and `cd` to where it is.
 * OR open the folder where it is, press `Files` &gt; `Open Windows PowerShell`
 
-![Windows Explorer File Menu](.gitbook/assets/image%20%281%29.png)
+![Windows Explorer File Menu](../.gitbook/assets/image%20%281%29.png)
 
 Now that you're inside the command prompt/powershell/terminal, we'll use gibMacOS to download the Recovery HD to be restored:
 
