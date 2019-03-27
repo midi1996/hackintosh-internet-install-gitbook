@@ -1,5 +1,5 @@
 ---
-description: 'Step1: Prepare Clover'
+description: 'Step 1: Prepare Clover'
 ---
 
 # Clover and friends \[part 1\]...
