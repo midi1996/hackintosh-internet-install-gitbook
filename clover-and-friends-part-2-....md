@@ -11,13 +11,13 @@ Got to [Rehabman config.plist repository](https://github.com/RehabMan/OS-X-Clove
 Then open the file with a text editor \(check above\), and add these with the boot arguments: `-v debug=0x100`. Boot arguments entry:
 
 ```markup
-	...
+    ...
 <key>Boot</key>
 <dict>
-	...
-	<key>Arguments</key>
-	<string>[You'll find some arguments here already, add the above to them]</string>
-	...
+    ...
+    <key>Arguments</key>
+    <string>[You'll find some arguments here already, add the above to them]</string>
+    ...
 ```
 
 Save the file, rename and copy the resulting plist file and paste it in CLOVER \(partition\)&gt; EFI &gt; CLOVER and replace the one already there.
@@ -95,5 +95,5 @@ Save the file, rename and copy the resulting plist file and paste it in CLOVER \
 17. Save
 18. Rename and copy the resulting plist file and paste it in CLOVER \(partition\)&gt; EFI &gt; CLOVER and replace the one already there.
 
-NOTE: to understand any of these options you **must** read this guide: [https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/). This guide gathers information and explanations for most of the hackintoshing process. Use it as an information base and guide if needed. 
+NOTE: to understand any of these options you **must** read this guide: [https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/). This guide gathers information and explanations for most of the hackintoshing process. Use it as an information base and guide if needed.
 
