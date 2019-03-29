@@ -1,4 +1,8 @@
-# Downloading the Recovery HD image...
+---
+description: Step 1
+---
+
+# Downloading the Recovery HD image
 
 After cloning/downloading `gibMacOS` \(that will be refereed as gOS later on\), you'll have to open the the folder where it is \(or `cd` to it if you clone it with git\). If you're using macOS or Linux, you should know how to `cd` to it through your preferred Terminal emulator. If you're a **Windows** user, follow these instructions to get to the command line inside the folder.
 

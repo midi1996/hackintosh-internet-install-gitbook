@@ -1,4 +1,8 @@
-# Preparing your installer media...
+---
+description: Step 2
+---
+
+# Preparing your installer media
 
 After the download, you'll find a new folder named `macOS downloads` where the program we used downloaded macOS recovery image for your macOS version. For this part of the setup. I'll be separating it to the 3 main OSes and how to make it.
 
