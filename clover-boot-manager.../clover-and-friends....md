@@ -50,6 +50,7 @@ For this part of the guide you'll install and prepare clover for the ramble.
      * _**USBInjectAll**_ \(Injects USB information, configuration is needed\)
        * Pair it with **FakePCIID+FakePCIID\_XHCIMux** if you're on a 5th gen laptop or 4th motherboard and earlier. 6th gen laptops or motherboards and later dont need it.
      * _**AppleALC**_ \(AppleHDA patcher for audio injection, depends on Lilu\)
+     * _**WhateverGreen**_ \(Fixes and patches a lot of graphics related issues and injections, requires Lilu\)
      * _\[optional, for desktop, **CRUCIAL, for laptops**\]_ _**VoodooPS2**_ \(PS2 drivers, needed for laptops\)
      * For your LAN card:
        * **AppleIntele1000** for some old cards

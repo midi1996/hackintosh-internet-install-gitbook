@@ -4,7 +4,7 @@ description: 'Step 2: READ THIS NOW!'
 
 # Config.plist Basics...
 
-You will need this information, if you already know your way around XML format, it will be a breeze for you \(you still need to read it thought\). 
+You will need this information, if you already know your way around XML format, it will be a breeze for you \(you still need to read it though\). 
 
 This will show you how to handle your config.plist manually, and I \*\***strongly recommend**\*\* that you learn this properly for the next section.
 
