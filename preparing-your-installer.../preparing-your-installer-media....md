@@ -18,7 +18,7 @@ Inside the same folder of gibMacOS, you'll find a cute `MakeInstall.bat` , doubl
 * type in its number
 * press enter and follow the rest of the instructions
 * You'll be asked to drop the Recovery image path, go to `macOS downloads` and explore its folders, until you get to a file with `.pkg` in the end, named either `RecoveryHDMetaDmg` or `RecoveryHDUpdate` \(depending on your macOS version\).
-* Grag-n-Drop **will not work**, so the workaround is `Shift` + _Right click_ on the file, then select `Copy as Path` as shown here
+* Drag-n-Drop **will not work**, so the workaround is `Shift` + _Right click_ on the file, then select `Copy as Path` as shown here
 
 ![](../.gitbook/assets/image%20%283%29.png)
 
