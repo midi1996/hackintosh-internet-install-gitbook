@@ -24,7 +24,7 @@ Then open the file with a text editor \(check above\), and add these with the bo
     ...
 ```
 
-Save the file, rename and copy the resulting plist file and paste it in CLOVER \(partition\)&gt; EFI &gt; CLOVER and replace the one already there.
+Save the file, rename and copy the resulting plist file to `config.plist` and paste it in CLOVER \(partition\)&gt; EFI &gt; CLOVER and replace the one already there.
 
 ### Tips:
 
