@@ -10,7 +10,7 @@ There are two section: **LAPTOPS** and **DESKTOPS**. Pick the one for you setup.
 
 ## For lappies:
 
-Got to [Rehabman config.plist repository](https://github.com/RehabMan/OS-X-Clover-Laptop-Config) and get a fitting config from the list to your hardware configuration. \[Hint: Check your intel GPU\]
+Got to [Rehabman config.plist repository](https://github.com/RehabMan/OS-X-Clover-Laptop-Config) and get a fitting config from the list to your hardware configuration. \[Hint: Check your intel GPU, if you dont have one, check the intel GPU that _should_ be with your CPU\]
 
 Then open the file with a text editor \(check above\), and add these with the boot arguments: `-v debug=0x100`. Boot arguments entry:
 
