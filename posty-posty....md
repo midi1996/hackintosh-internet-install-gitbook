@@ -15,16 +15,10 @@ Now that's installed, here are some useful links:
 * **Laptop DSDT/SSDT patching:** [https://www.tonymacx86.com/threads/guide-patching-laptop-dsdt-ssdts.152573/](https://www.tonymacx86.com/threads/guide-patching-laptop-dsdt-ssdts.152573/)\*\*\*\*
 * **Laptop DSDT patching for battery:** [https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/](https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/)\*\*\*\*
 * **Laptop Clover Hotpatch \[only after successful DSDT patching\]:** [https://www.tonymacx86.com/threads/guide-using-clover-to-hotpatch-acpi.200137/](https://www.tonymacx86.com/threads/guide-using-clover-to-hotpatch-acpi.200137/)\*\*\*\*
-* **\[GPU\] WhateverGreen Patching:**
-  * \[TMX\]: [https://www.tonymacx86.com/threads/guide-intel-framebuffer-patching-using-whatevergreen.256490/](https://www.tonymacx86.com/threads/guide-intel-framebuffer-patching-using-whatevergreen.256490/)
-  * \[IM\]: [https://www.insanelymac.com/forum/topic/334899-intel-framebuffer-patching-using-whatevergreen/](https://www.insanelymac.com/forum/topic/334899-intel-framebuffer-patching-using-whatevergreen/)
 {% endtab %}
 
 {% tab title="Desktops" %}
 * **/u/corpnewt vanilla guide:** [https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide)
-* **\[GPU\] WhateverGreen Patching:**
-  * \[TMX\]: [https://www.tonymacx86.com/threads/guide-intel-framebuffer-patching-using-whatevergreen.256490/](https://www.tonymacx86.com/threads/guide-intel-framebuffer-patching-using-whatevergreen.256490/)
-  * \[IM\]: [https://www.insanelymac.com/forum/topic/334899-intel-framebuffer-patching-using-whatevergreen/](https://www.insanelymac.com/forum/topic/334899-intel-framebuffer-patching-using-whatevergreen/)
 {% endtab %}
 {% endtabs %}
 
@@ -34,7 +28,7 @@ For either:
   * Map your USB ports so that you dont need the USB kext patch \(and may probably fix sleep/wake for some\)
     * Guide \[first\]: [https://usb-map.gitbook.io/project/](https://usb-map.gitbook.io/project/)
     * Tool \[second\]: [https://github.com/corpnewt/USBMap](https://github.com/corpnewt/USBMap)
-* WhateverGreen Patching:
+* \[GPU\] WhateverGreen Patching:
   * \[TMX, has more activity\]: [https://www.tonymacx86.com/threads/guide-intel-framebuffer-patching-using-whatevergreen.256490/](https://www.tonymacx86.com/threads/guide-intel-framebuffer-patching-using-whatevergreen.256490/)
   * \[IM, eh?\]: [https://www.insanelymac.com/forum/topic/334899-intel-framebuffer-patching-using-whatevergreen/](https://www.insanelymac.com/forum/topic/334899-intel-framebuffer-patching-using-whatevergreen/)
 * 
