@@ -12,19 +12,14 @@ There are two section: **LAPTOPS** and **DESKTOPS**. Pick the one for you setup.
 
 Got to [Rehabman config.plist repository](https://github.com/RehabMan/OS-X-Clover-Laptop-Config) and get a fitting config from the list to your hardware configuration. \[Hint: Check your intel GPU, if you dont have one, check the intel GPU that _should_ be with your CPU\]
 
-Then open the file with a text editor \(check above\), and add these with the boot arguments: `-v debug=0x100`. Boot arguments entry:
+1. Download **ProperTree**: [https://github.com/corpnewt/ProperTree](https://github.com/corpnewt/ProperTree)
+   * Use this to edit any plist file 👌, and it's crossplatform
+2. Open ProperTree.cmd
+3. File &gt; Open &gt; path to the chosen config.plist
+4. Boot\Arguments:
+   * add `-v debug=0x100 keepsyms=1`
 
-```markup
-    ...
-<key>Boot</key>
-<dict>
-    ...
-    <key>Arguments</key>
-    <string>[You'll find some arguments here already, add the above to them]</string>
-    ...
-```
-
-Save the file, rename and copy the resulting plist file to `config.plist` and paste it in CLOVER \(partition\)&gt; EFI &gt; CLOVER and replace the one already there.
+Then, File &gt; Save the file, rename and copy the resulting plist file to `config.plist` and paste it in CLOVER \(partition\)&gt; EFI &gt; CLOVER and replace the one already there.
 
 ### Tips:
 
@@ -53,13 +48,6 @@ Save the file, rename and copy the resulting plist file to `config.plist` and pa
 5. Under Devices:
    * USB: Inject - Add Clock ID - Fix Ownership
    * Audio: Inject : 1 \(type it inside Layout ID\)
-   * **\[MUST\]** Intel GPU configuration: 
-     * [Haswell](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/haswell#devices)
-     * [SkyLake](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/skylake#devices)
-     * [KabyLake](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/kaby-lake#devices)
-     * [CoffeeLake](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake#devices)
-       * **Note**: You'll see Clover Configurator pictures, it's close to what you'll see on CCE. HOWEVER, I recommend you do some manual editing in case something doesn't work.
-       * **Note 2**: If you're using Novideo \(_NVIDIA_\) or AyyMD \(_AMD_\) GPU, you do not need this intel part, **skip it,** _however,_ if you want QuickSync functionality \(usually on AMD + Intel GPUs mix\), check the above links to set a _connector-less_ iGPU setup.
 6. Under GUI:
    * Scan Options: Custom - Scan Entries - Scan Tools - Scan Kernel: Disabled - Scan Legacy: Disabled.
    * \[optional\] Mouse: Enabled
@@ -75,7 +63,7 @@ Save the file, rename and copy the resulting plist file to `config.plist` and pa
    * Booter Config: 0x28
    * Csr Active Config: 0x3E7 \(some may use 0x67 for pre-High Sierra\)
 10. Under SMBIOS:
-    * Coffee Lake - _iMac18,2/18,3_
+    * Coffee Lake - _iMac18,2/18,3 or iMac19,x_
       * Use _iMac18,1_ if you are using the iGPU only
     * Kabylake - _iMac18,2/18,3_
     * Skylake - _iMac17,1_
@@ -97,7 +85,32 @@ Save the file, rename and copy the resulting plist file to `config.plist` and pa
 15. name: `config` \(no extension\)
 16. Download
 17. Save
-18. Rename and copy the resulting plist file and paste it in CLOVER \(partition\)&gt; EFI &gt; CLOVER and replace the one already there.
+18. \[If you're using intel GPU\] Download **ProperTree**: [https://github.com/corpnewt/ProperTree](https://github.com/corpnewt/ProperTree)
+    * Use this to edit any plist file 👌, and it's crossplatform 
+    * \[If you're using intel GPU\] Open ProperTree.bat \(or run `python ProperTree.command`\)
+      1. File &gt; Open &gt; config.plist \(the one you downloaded\)
+      2. Expand `Devices`
+         1. Add Child \(press + key on expanded `Devices`, or right click &gt; add child\)
+            * Key: Properties
+            * Type: Dictionary
+         2. Add Child under Properties \(press + key\)
+            * Key: `PciRoot(0x0)/Pci(0x2,0x0)`
+            * Type: Dictionary
+         3. Add Child under PciRoot\(0x0\)/Pci\(0x2,0x0\) \(press + key\)
+            * Key: `AAPL,ig-platform-id`
+            * Type: Data
+            * Value: _\[Check these links\]_
+              * For [IvyBidge](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/ivy-bridge#properties)
+              * For [Haswell ](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/haswell#properties)\*
+              * For [Skylake ](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/skylake#properties)\* 
+              * For [KabyLake ](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/kaby-lake#properties)\*
+              * For [CoffeeLake ](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake#properties)\*
+                * \(\*\) For some of these setups, you'll be also invited to add other values next to `AAPL,ig-platform-id`, just highlight the entry in the config and press `+` key to add a sibling, and add all the data you need \(examples of the extra information: `device-id`, `framebuffer-patch*` for framebuffer entries.
+            * Check the screenshot bellow to see how it should look like
+      3. File &gt; Save As &gt; path/to/CLOVER/partition/EFI/CLOVER/ &gt; Name: `config.plist`
+19. Rename and copy the resulting plist file and paste it in CLOVER \(partition\)&gt; EFI &gt; CLOVER and replace the one already there \(you have already done this if you followed the intel GPU section\).
 
-NOTE: to understand any of these options you **must** read this guide: [https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/). This guide gathers information and explanations for most of the hackintoshing process. Use it as an information base and guide if needed.
+![Screenshot of ProperTree in action.](../.gitbook/assets/image%20%285%29.png)
+
+**NOTE**: to understand any of these options you **must** read this guide: [https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/). This guide gathers information and explanations for most of the hackintoshing process. Use it as an information base and guide if needed.
 

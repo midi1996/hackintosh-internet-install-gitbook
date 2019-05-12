@@ -8,7 +8,7 @@ You will need this information, if you already know your way around XML format, 
 
 This will show you how to handle your config.plist manually, and I \*\***strongly recommend**\*\* that you learn this properly for the next section.
 
-## \*\*\*\*[**Config.plist Basics - Vanilla Guide**](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-basics)\*\*\*\*
+## \*\*\*\*[**Config.plist Basics - Vanilla Guide**](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-basics) **\[THIS IS A LINK\]**
 
 Big thanks to /u/corpnewt for the time and effort put in that guide.
 
