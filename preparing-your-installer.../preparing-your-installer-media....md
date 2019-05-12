@@ -8,7 +8,7 @@ After the download, you'll find a new folder named `macOS downloads` where the p
 
 ## Winders \(windows\)
 
-Thanks to /u/corpnewt time and head-butting, he made a pretty good script to make the installer on the USB.
+Thanks to /u/corpnewt's time and head-butting, he made a pretty good script to make the installer on the USB.
 
 Inside the same folder of gibMacOS, you'll find a cute `MakeInstall.bat` , double click it, accept UAC admin user, you'll be greeted by a CMD screen. The software will download software needed \(`dd` port for windows and 7-zip\). Then you'll be greeted with a list of drives:
 

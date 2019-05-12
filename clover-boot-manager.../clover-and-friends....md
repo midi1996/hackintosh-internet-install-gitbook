@@ -23,7 +23,7 @@ For this part of the guide you'll install and prepare clover for the ramble.
             4. BIOS Drivers, 64 bit: ApfsDriverLoader - AppleImageLoader
             5. Uncheck the rest of there is anything checked
          7. Install
-         8. Go to **Step 7** bellow
+         8. Go to **Step 7** below
 2. Mount the ISO
    1. On linux, use `mount` command with `-o loop,ro` or with `gnome-disks` by right-clicking the iso &gt; mount image 
    2. On macOS, double click
@@ -63,24 +63,24 @@ For this part of the guide you'll install and prepare clover for the ramble.
          * _Note: if you're not sure, LOOK FOR YOUR LAN CHIPSET AND CHECK THIS AGAIN._
      * _\[Exceptionally for WiFi-only users\]_ For your compatible WiFi Card:
        * USB Wifi Users: **NO \[wont work while the install, look for the driver after the install\]**
-       * for Broadcom based chips _\(DW1550-DW1560-DW1830...\)_: AirPortBcmFixUp
+       * for Broadcom based chips _\(DW1550-DW1560-DW1830...\)_: AirPortBrcmFixUp
        * for Atheros based chips _\(AR5B95/195/97/197, based on AR9280/AR9285 SoC\)_:
          * go to [https://github.com/RehabMan/HP-ProBook-4x30s-DSDT-Patch/archive/master.zip](https://github.com/RehabMan/HP-ProBook-4x30s-DSDT-Patch/archive/master.zip)
          * extract the zip
          * explore to `kexts`
          * get `ProbookAtheros.kext`
-       * for QComAtheros: _NOPE_ - Change it \(check AR95/4XX bellow\)
+       * for QComAtheros: _NOPE_ - Change it \(check AR95/4XX below\)
        * for Intel: _NOPE_ - Change it
        * for Atheros based on _AR95XX-AR94XX_: ATH9KFixUp with proper boot argument options seen in the original github [repo](https://github.com/chunnann/ATH9KFixup) or rehabman's [fork](https://github.com/RehabMan/ATH9KFixup) \(ignore the fact that you need to install it under /S/L/E\).
 8. Extract every zip
    * Note: a kexts is a macOS driver, and it's in a form of a `a_folder_name.kext`, on windows it will show as a folder, on macOS it will show as a file.
 9. now copy VirtualSMC.**kext** \(or FakeSMC.kext\) - Lilu.kext - WhateverGreen.kext - USBInjectAll.kext - AppleALC.kext - \[your\_ethernet\_driver\].kext \(and any extra kext you needed from above\) and put it in _**CLOVER \(USB\) &gt; EFI &gt; CLOVER &gt; kexts &gt; Other**_. _\[skip the sensor kexts, they may cause kernel panics, aka KP. For VirtualSMC, copy over SMCProcessor if you want to, leave the rest out\]_
-   1. _Basically what you should have in the end:_ `- AppleALC.kext  - Lilu.kext  - USBInjectAll.kext  - VirtualSMC.kext  - VoodooPS2Controller.kext (laptop users)  - WhateverGreen.kext  - <SomeEthernetDriver>.kext`
-10. now you're mostly done with Clover and macOS installer preparation.
+   1. _Basically what you should end up with:_  `- AppleALC.kext  - Lilu.kext  - USBInjectAll.kext  - VirtualSMC.kext  - VoodooPS2Controller.kext (laptop users)  - WhateverGreen.kext  - <SomeEthernetOrWifiDriver>.kext`
+10. Now you're mostly done with Clover and macOS installer preparation.
 
 **Extra note for X299 people:**
 
-You need to add `GenericUSBXHCI` kext from the kext repository above, along VoodooTSCSync if you can't enable Core Syncing in your firmware, more on that [here](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/gathering-kexts#usb) \[USB\] and [here](https://www.tonymacx86.com/threads/how-to-build-your-own-imac-pro-successful-build-extended-guide.229353/) \[Go to the BIOS section, as it's the most important part of that whole talk\].
+You may need to add `GenericUSBXHCI` kext from the kext repository above, along VoodooTSCSync if you can't enable Core Syncing in your firmware, more on that [here](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/gathering-kexts#usb) \[USB\] and [here](https://www.tonymacx86.com/threads/how-to-build-your-own-imac-pro-successful-build-extended-guide.229353/) \[Go to the BIOS section, as it's the most important part of that whole talk\].
 
 ## Important
 

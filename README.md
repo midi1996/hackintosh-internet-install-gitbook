@@ -2,7 +2,7 @@
 
 Some people can't just get the Vanilla guide from /r/Hackintosh working just right. Reasons can differ: can't set up the VM for whatever reason, can't access a real mac \(although this guide works on macOS too\), download corruptions, small USB disks \(at this time and age? shame on you\), 4GB of RAM \(seriously?\)... or just pure laziness.
 
-So it happens that real macs can re-install macOS directly from the internet, without the need for a disk or installer support, and they do that through "Internet Recovery". When a mac finds no OS or recovery partition, it will try to load a recovery system from Apple's servers and then boot it then install macOS through the internet to the mac. And following the same idea, we can, as hackintoshers, do the same \(sort of\). Btw, did I tell you this guide will work on any OS?
+It happens that real macs can re-install macOS directly from the internet, without the need for a disk or installer support, and they do that through "Internet Recovery". When a mac finds no OS or recovery partition, it will try to load a recovery system from Apple's servers and then boot it then install macOS through the internet to the mac. And following the same idea, we can, as hackintoshers, do the same \(sort of\). Btw, did I tell you this guide will work on any OS?
 
 #### How does it work?
 
@@ -41,7 +41,7 @@ This guide will \***probably**\* not contain any post-install guide, as it's doc
 
 This is not a very welcoming community for people who do not want to do some self-study and learn from other's findings and instead wait for someone to spoon-feed them information and make things work for them. Read The Fucking Manual and work your way through it and do some intense googling.
 
-**READ THE GUIDE FULLY BEFORE YOU ASK.** Most probably your question has already been answered, and if not, someone did ask it and it's on the net somewhere.
+**READ THE GUIDE FULLY TWICE BEFORE ASKING.** Most probably your question has already been answered, and if not, someone did ask it and it's on the net somewhere.
 
 ### Credits:
 

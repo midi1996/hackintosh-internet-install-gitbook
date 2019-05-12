@@ -35,7 +35,7 @@ OK. So this thing requires a lot of stuff to prepare.
   * Be it:
     * macOS \(a fairly recent one would be better\)
     * Windows \(Windows 10, 1703 or newer\)
-    * Linux \(with pyhton2.7 or later\), make sure it's clean and properly functioning.
+    * Linux \(with python2.7 or later\), make sure it's clean and properly functioning.
   * And **15GB** of free space on the drive you're working on. On Windows, your OS disk must have 15GB free at least
 * Some googling skills, which a lot of you lack sadly.
 * **Brain** cells and patience and reading capabilities _**\[CRUCIAL\]**_
@@ -46,8 +46,9 @@ OK. So this thing requires a lot of stuff to prepare.
   * For Windows, get it from [https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/) and make sure you enable "add to PATH" in the install
   * For linux users, install it if you dont have it following your distro's tools
   * For macOS users, you already have 2.7+ version installed, no need for extra tools
-* A text editor: Notepad++, Sublime Text, VSCode...
-  * Note: on October/fall 2018 Windows Update, the native notepad can work too. Older versions of windows must use a 3rd party text editor. If you dont know what this is, get a one of the text editors above.
+* ProperTree \[Recommended\]: a simple tool to edit plist files, from /u/corpnewt [https://github.com/corpnewt/ProperTree](https://github.com/corpnewt/ProperTree)
+  * Or text editor: Notepad++, Sublime Text, VSCode...
+    * Note: on October/fall 2018 Windows Update, the native notepad can work too. Older versions of windows must use a 3rd party text editor. If you dont know what this is, get a one of the text editors above.
 * gibMacOS: a sweet tool from /u/corpnewt [https://github.com/corpnewt/gibMacOS](https://github.com/corpnewt/gibMacOS)
   * if you have git on windows use it to clone the repo
   * if you dont, press `Clone or Download` button and download as Zip, extract it somewhere
