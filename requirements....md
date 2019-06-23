@@ -42,14 +42,16 @@ OK. So this thing requires a lot of stuff to prepare.
 
 ### Non-physical requirements
 
-* Python 2.7 or greater:
+* **Python** 2.7 or greater:
   * For Windows, get it from [https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/) and make sure you enable "add to PATH" in the install
+    * NOTE: There seem to be a bug in 1903 release of Windows, if the `.bat` file doesn't load for you, just open a new PS/CMD window \(as admin\), and run `python <file.py>` from the guide.
+    * **DO NOT** use the python release in the Microsoft Store, get it from the official website.
   * For linux users, install it if you dont have it following your distro's tools
   * For macOS users, you already have 2.7+ version installed, no need for extra tools
-* ProperTree \[Recommended\]: a simple tool to edit plist files, from /u/corpnewt [https://github.com/corpnewt/ProperTree](https://github.com/corpnewt/ProperTree)
+* **ProperTree** \[Recommended\]: a simple tool to edit plist files, from /u/corpnewt [https://github.com/corpnewt/ProperTree](https://github.com/corpnewt/ProperTree)
   * Or text editor: Notepad++, Sublime Text, VSCode...
     * Note: on October/fall 2018 Windows Update, the native notepad can work too. Older versions of windows must use a 3rd party text editor. If you dont know what this is, get a one of the text editors above.
-* gibMacOS: a sweet tool from /u/corpnewt [https://github.com/corpnewt/gibMacOS](https://github.com/corpnewt/gibMacOS)
+* **gibMacOS**: a sweet tool from /u/corpnewt [https://github.com/corpnewt/gibMacOS](https://github.com/corpnewt/gibMacOS)
   * if you have git on windows use it to clone the repo
   * if you dont, press `Clone or Download` button and download as Zip, extract it somewhere
 * Other software requirements will be downloaded thorough the guide \(OS specific\)

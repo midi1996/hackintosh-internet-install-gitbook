@@ -14,12 +14,13 @@ After cloning/downloading `gibMacOS`, you'll have to open the the folder where i
 Now that you're inside the command prompt/powershell/terminal, we'll use gibMacOS to download the Recovery HD to be restored:
 
 1. run `python gibMacOS.command -r -v <macos version>` and replace `<macos version>` with your target version:
-   1. `10.14` or `mojave` for macOS Mojave release
-   2. `10.13` or `"high sierra"` \(with quotes\) for macOS High Sierra release
-   3. `10.11` or `"el capitan"` \(with quotes\) for OS X El Capitan release \[gone\]
-   4. `10.10` or `yosemite` for OS X Yosemite release \[gone\] 
-   5. `10.9` or `mavericks` for OS X Mavericks release \[gone\]
-   6. You may be asking where is Sierra, well ever since Sierra, apple started removing links from the AppStore to that release and thus from the release catalog, you can manually download from [here](http://swcdn.apple.com/content/downloads/01/53/031-86778/pnekzincp6rkf5iu91onj1bm5mw1gotnwg/RecoveryHDUpdate.pkg). \(thanks cvad for providing backup links in his BDU tool\) I think the same will happen to High Sierra and Mojave, ¯\\_\(ツ\)\_/¯.
+   * `10.14` or `mojave` for macOS Mojave release
+   * `10.13` or `"high sierra"` \(with quotes\) for macOS High Sierra release
+   * For the older releases, just download the `.pkg` file directly, as they've been removed from the catalog that apple provides:
+     * [Sierra](http://swcdn.apple.com/content/downloads/01/53/031-86778/pnekzincp6rkf5iu91onj1bm5mw1gotnwg/RecoveryHDUpdate.pkg)
+     * [El Capitan](http://swcdn.apple.com/content/downloads/08/58/031-45768/yy0xr85ltis3a7mxuqf3zgaw7sovupckd7/RecoveryHDUpdate.pkg)
+     * [Yosemite](http://swcdn.apple.com/content/downloads/21/09/031-20634/8d84o1ky5gn2agnf5kiz9eed134n7y3q4c/RecoveryHDUpdate.pkg)
+       * Credit: cvad's tool
 2. The software will download the recovery image, meanwhile:
    1. Plug your USB device \(USB 2.0 drive are recommended\)
    2. Backup any data \*from\* it

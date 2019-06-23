@@ -4,7 +4,7 @@
 
 To start the installation:
 
-1. Plug the Ethernet
+1. _**Plug the Ethernet**_
 2. Plug the USB
 3. Start the computer into the boot menu \(refer to your motherboards manual or google\)
 4. Select your USB device \(make sure it says UEFI or PX before it, some motherboards with only legacy may not find UEFI, it's fine, tho I'm not supporting Legacy booting atm\).

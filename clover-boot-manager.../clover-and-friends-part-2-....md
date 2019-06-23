@@ -106,6 +106,7 @@ Then, File &gt; Save the file, rename and copy the resulting plist file to `conf
               * For [KabyLake ](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/kaby-lake#properties)\*
               * For [CoffeeLake ](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake#properties)\*
                 * \(\*\) For some of these setups, you'll be also invited to add other values next to `AAPL,ig-platform-id`, just highlight the entry in the config and press `+` key to add a sibling, and add all the data you need \(examples of the extra information: `device-id`, `framebuffer-patch*` for framebuffer entries.
+                * What you need to do is read that explanation and check the sections above it to fill in the blank in your config \(device-id, AAPL, ig-platform-id, and so on\). You'll have to use some brain power \(not really\) to get that.
             * Check the screenshot bellow to see how it should look like
       3. File &gt; Save As &gt; path/to/CLOVER/partition/EFI/CLOVER/ &gt; Name: `config.plist`
 19. Rename and copy the resulting plist file and paste it in CLOVER \(partition\)&gt; EFI &gt; CLOVER and replace the one already there \(you have already done this if you followed the intel GPU section\).
