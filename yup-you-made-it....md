@@ -1,4 +1,4 @@
-# Yup, you made it...
+# Yup, you made it
 
 ## Now you're ready to plug-n-play.
 

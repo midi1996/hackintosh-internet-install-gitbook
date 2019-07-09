@@ -1,4 +1,4 @@
-# Firmware changes...
+# Firmware changes
 
 Now depending on your computer motherboard make sure of:
 

@@ -1,2 +1,2 @@
-# Preparing your Installer...
+# Preparing your Installer
 

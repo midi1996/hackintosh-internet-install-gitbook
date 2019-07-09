@@ -1,4 +1,4 @@
-# First contact...
+# First contact
 
 Some people can't just get the Vanilla guide from /r/Hackintosh working just right. Reasons can differ: can't set up the VM for whatever reason, can't access a real mac \(although this guide works on macOS too\), download corruptions, small USB disks \(at this time and age? shame on you\), 4GB of RAM \(seriously?\)... or just pure laziness.
 

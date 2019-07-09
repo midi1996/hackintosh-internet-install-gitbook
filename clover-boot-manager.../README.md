@@ -1,2 +1,2 @@
-# Clover Boot Manager...
+# Clover Boot Manager
 

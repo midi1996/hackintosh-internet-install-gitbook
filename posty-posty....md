@@ -1,6 +1,6 @@
-# Posty-Posty...
+# Posty-Posty
 
-Now that's installed, here are some useful links:
+Now that's installed, here are some useful links for post install \(and also configuring things while you're at it\):
 
 ## Desktops
 

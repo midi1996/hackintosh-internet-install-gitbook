@@ -2,7 +2,7 @@
 description: 'Step 2: READ THIS NOW!'
 ---
 
-# Config.plist Basics...
+# Config.plist Basics
 
 You will need this information, if you already know your way around XML format, it will be a breeze for you \(you still need to read it though\). 
 
