@@ -2,6 +2,8 @@
 
 Now depending on your computer motherboard make sure of:
 
+For Desktops:
+
 * XHCI Handoff: Enabled \(if applicable, some may not have this option\)
 * OS Type: Other \(if applicable\)
 * Secure Boot: Disabled \(refer to google or your motherboard's manual on how to disable it\)

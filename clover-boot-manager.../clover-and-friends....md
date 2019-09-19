@@ -53,7 +53,7 @@ For this part of the guide you'll install and prepare clover for the ramble.
 4. Go to kexts &gt; Other
    * Go to [Goldfish64's Kext Repo](https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw)
    * Download these: _\[Note: Explore each folder and you'll find a Zip file, get that Zip file, not the whole folder\]_ 
-     * _Essential Kexts \(essential for booting\)_ 
+     * _**Essential Kexts** \(essential for booting\)_
        * _**VirtualSMC**_ \(emulates an SMC system, VSMC has higher quality code than FakeSMC, another older and long developed kext. They both do the same, so _do not_  mix them\)
          * Use only VirtualSMC.kext \(or FakeSMC.kext\) in CLOVER
        * _**Lilu**_ \(an arbitrary kext patcher, required by some other kexts like WhateverGreen, AppleALC...\)
@@ -63,12 +63,13 @@ For this part of the guide you'll install and prepare clover for the ramble.
        * _**WhateverGreen**_ \(Fixes and patches a lot of graphics related issues and injections, requires Lilu\)
        * _\[optional, for desktop, **CRUCIAL, for laptops**\]_ _**VoodooPS2Controller**_ \(PS2 drivers, needed for laptops\)
          * Note that there is an `acidanthera` fork, **do not use it**. Its support is quite limited to some trackpads and it might outright not work, use the other release. 
-     * _Network Kexts \(**mandatory**\)_ 
+     * _**Network Kexts** \(**mandatory**\)_
        * **AppleIntele1000** for some old cards
        * [**HoRNDIS**](https://github.com/midi1996/JBOG/blob/master/Extra/HoRNDIS.kext.zip?raw=true) _ONLY IF YOU NEED NETWORK CONNECTION USING ANDROID_, use the link in the name
        * **IntelMausiEthernet** for most Intel NICs
        * **AtherosE2200Ethernet** for some Atheros/QualcommAtheros/Killer\(some\) NICs
        * **BCM5722D** for Broadcom BCM5722 NetXtreme and NetLink family
+       * **BCM57xx** _\(other than 5722\)_ get FakePCIID zip folder, and use FakePCIID + FakePCIID\_BCM57XX\_as\_BCM57765
        * **RealtekRTL8100** for 10/100 Realtek Cards \(Realtek FE\)
        * **RealtekRTL8111** for Gigabit Realtek Cards \(Realtek GbE\)
        * \*\*\*\*[**SmallTreeIntel211**](https://cdn.discordapp.com/attachments/390417931659378688/556912824228773888/SmallTree-Intel-211-AT-PCIe-GBE.kext.zip) for some Intel ethernet chipsets \(use the link in the name\)

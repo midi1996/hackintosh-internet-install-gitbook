@@ -39,9 +39,13 @@ This guide will \***probably**\* not contain any post-install guide, as it's doc
 
                                                                                                                             ~ Everyone. 
 
+{% hint style="warning" %}
 This is not a very welcoming community for people who do not want to do some self-study and learn from other's findings and instead wait for someone to spoon-feed them information and make things work for them. Read The Fucking Manual and work your way through it and do some intense googling.
+{% endhint %}
 
+{% hint style="danger" %}
 **READ THE GUIDE FULLY TWICE BEFORE ASKING.** Most probably your question has already been answered, and if not, someone did ask it and it's on the net somewhere.
+{% endhint %}
 
 ### Credits:
 

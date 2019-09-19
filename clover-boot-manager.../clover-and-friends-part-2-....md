@@ -21,6 +21,7 @@ Got to [Rehabman config.plist repository](https://github.com/RehabMan/OS-X-Clove
 
 Then, File &gt; Save the file, rename and copy the resulting plist file to `config.plist` and paste it in CLOVER \(partition\)&gt; EFI &gt; CLOVER and replace the one already there.
 
+{% hint style="info" %}
 ### Tips:
 
 * _**In case**_ you have a USB3.0 drive, add `-uia_exclude_hs` to the `Boot > Arguments`, this will disable your HS ports from your USB3.0 ports \(basically, you will not be able to use USB2.0 devices on those ports\)
@@ -29,6 +30,7 @@ Then, File &gt; Save the file, rename and copy the resulting plist file to `conf
   * Use a USB2.0 cable extender \(this will force the USB3.0 flash drive to be on USB2.0 mode\)
   * Look for a USB2.0 drive
 * For people with **Broadwell \(5th Gen Intel CPUs\) and older,** you have two sets of USB Controllers: _EHCI_ and _XHCI_. You will only use **XHCI** controller since the **EHCI** controller will be disabled. How should you know which port is connected to which? Look for USB3.0 ports \(named SS USB, has 4+5 sets of pins or is blue, and probably have a SS logo/name\) and plug your USB there.
+{% endhint %}
 
 ## For deskies:
 
@@ -58,7 +60,7 @@ Then, File &gt; Save the file, rename and copy the resulting plist file to `conf
    * Apple RTC - Kernel PM
    * Select the Blue Globe in Kernel Patches: add all patches
    * \[optional\] IF YOU NEED IT, choose a FakeCPU ID \(only if you're using an older macOS version on a new hardware system, eg: running Sierra on a CoffeeLake system, choose either KabyLake if it's 10.12.6, or SkyLake id =&lt;10.12.6\)
-   * \[ONLY FOR IVYBRIDGE AND SANDYBRIDGE\] Apple Intel CPU PM \(this helps with AppleIntelCPUPM kernel panic, it patches it for locked MSR 0xE2\)
+   * \[ONLY FOR IVYBRIDGE AND SANDYBRIDGE\] AppleICPUPM \(this helps with AppleIntelCPUPM kernel panic, it patches it for locked MSR 0xE2\)
 9. Under RT Variables:
    * Booter Config: 0x28
    * Csr Active Config: 0x3E7 \(some may use 0x67 for pre-High Sierra\)
@@ -113,5 +115,7 @@ Then, File &gt; Save the file, rename and copy the resulting plist file to `conf
 
 ![Screenshot of ProperTree in action.](../.gitbook/assets/image%20%285%29.png)
 
-**NOTE**: to understand any of these options you **must** read this guide: [https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/). This guide gathers information and explanations for most of the hackintoshing process. Use it as an information base and guide if needed.
+**NOTE**: to understand any of these options you **must** read this guide: [https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/). This guide gathers information and explanations for most of the hackintoshing process. Use it as an information base and guide if needed.  
+  
+This can be also done with CCE.
 
