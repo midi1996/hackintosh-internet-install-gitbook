@@ -28,7 +28,7 @@ OK. So this thing requires a lot of stuff to prepare.
   * Note2: **use a USB2.0 drive,** HDDs may not be a good choice, also if you don't have any USB2.0, plug the USB in a USB2.0 port if available, or use a USB extension cord that doesn't support USB3.0, this way the USB3.0 drive will run in USB2.0 mode.
 * _**\[CRUCIAL\]**_ a **LAN connection** \(no wifi, no wifi dongles, Ethernet USB adapter may work depending on macOS support\) and you must know your LAN card's model \(and your internet speed\)
   * For lappies: you must either have a physical lan port, or a compatible macOS ethernet dongle/adapter, or in case your have a compatible wifi card, it's also good but not recommended \(unless it's the only way to go\)
-  * For people who can't use ethernet but have an android phone, you can connect your android phone to WiFi and then tether it using USB, sadly, iOS users can't use that :/
+  * For people who can't use ethernet but have an android phone, you can connect your android phone to WiFi and then tether it using USB. IOS users can do this as well but you need the tetherme tweak on a jailbroken iphone. Unfortnunately if you are not on the right version (any ios version up to 12.1.2) this is not possible. :/
 * A **fast internet connection** \(20Mbps downlink may take about an hour for the install procedure, the faster the better\).
   * Users have complained of slow or locked up downloads, that's mainly due to slow or unstable internet.
 * A **Proper OS Installation:**
