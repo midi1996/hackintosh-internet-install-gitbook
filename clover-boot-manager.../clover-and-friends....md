@@ -42,9 +42,10 @@ For this part of the guide you'll install and prepare clover for the ramble.
 2. Clover Drivers \(EFI drivers, not to be confused with kexts, which are macOS drivers\)
    1. for UEFI users:
       * Open `drivers > UEFI`, _delete_ everything, **BUT** _ApfsDriverLoader_  _- AptioMemoryFix - HFSPlus_
-      * (If _AptioMemoryFix_ or _HFSPlus_ are missing, copy them from `drivers > off`
+       * (If _AptioMemoryFix_ or _HFSPlus_ are missing, copy them from `drivers > off`)
    2. for Legacy users:
       * go to `drivers > BIOS`, keep it as it is.
+       * (If _AptioMemoryFix_ or _HFSPlus_ are missing, copy them from `drivers > off`)
 3. Delete now:
    1. UEFI users, delete:
       1. `drivers > BIOS`
