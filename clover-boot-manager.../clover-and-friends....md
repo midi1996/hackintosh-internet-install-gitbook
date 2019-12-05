@@ -41,14 +41,18 @@ For this part of the guide you'll install and prepare clover for the ramble.
    2. Make a folder named `ACPI` with subfolders: `origin` `patched` `WINDOWS` \(case sensitive\)
 2. Clover Drivers \(EFI drivers, not to be confused with kexts, which are macOS drivers\)
    1. for UEFI users:
-      * Open `drivers > UEFI`, _deled_ everything, **BUT** _ApfsDriverLoader_  _- AptioMemoryFix - HFSPlus_
+      * Open `drivers > UEFI`, _delete_ everything, **BUT** _ApfsDriverLoader_  _- AptioMemoryFix - HFSPlus_
+       * (If _AptioMemoryFix_ or _HFSPlus_ are missing, copy them from `drivers > off`)
    2. for Legacy users:
       * go to `drivers > BIOS`, keep it as it is.
+       * (If _AptioMemoryFix_ or _HFSPlus_ are missing, copy them from `drivers > off`)
 3. Delete now:
    1. UEFI users, delete:
       1. `drivers > BIOS`
    2. Legacy users, delete:
       1. `drivers > UEFI`
+   3. Optionally delete:
+      1. `drivers > off`      
 4. Go to kexts &gt; Other
    * Go to [Goldfish64's Kext Repo](https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw)
    * Download these: _\[Note: Explore each folder and you'll find a Zip file, get that Zip file, not the whole folder\]_ 
