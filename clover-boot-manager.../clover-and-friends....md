@@ -19,7 +19,7 @@ For this part of the guide you'll install and prepare clover for the ramble.
 4. Copy the EFI folder from the ISO to the CLOVER USB
    1. you should have CLOVER \(USB\) &gt; EFI \(folder\) &gt; CLOVER & BOOT
 
-* _**Note for macOS users** who want to use **legacy** on the destination machine:_
+5.  _**Note for macOS users** who want to use **legacy** on the destination machine:_
   1. If you're booting from UEFI on the destination go to **step 2: Mount the ISO** \(do not follow this note\)
   2. Download the pkg from the source above
   3. Open the installer
