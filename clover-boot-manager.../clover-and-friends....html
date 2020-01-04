@@ -1,0 +1,537 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Clover and friends [part 1] · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Step 1: Prepare Clover">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="config.plist-basics....html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    First contact
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../requirements....html">
+            
+                <a href="../requirements....html">
+            
+                    
+                    Requirements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../preparing-your-installer.../">
+            
+                <a href="../preparing-your-installer.../">
+            
+                    
+                    Preparing your Installer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../preparing-your-installer.../untitled-1.html">
+            
+                <a href="../preparing-your-installer.../untitled-1.html">
+            
+                    
+                    Downloading the Recovery HD image
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../preparing-your-installer.../preparing-your-installer-media....html">
+            
+                <a href="../preparing-your-installer.../preparing-your-installer-media....html">
+            
+                    
+                    Preparing your installer media
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Clover Boot Manager
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="clover-and-friends....html">
+            
+                <a href="clover-and-friends....html">
+            
+                    
+                    Clover and friends [part 1]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="config.plist-basics....html">
+            
+                <a href="config.plist-basics....html">
+            
+                    
+                    Config.plist Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="clover-and-friends-part-2-....html">
+            
+                <a href="clover-and-friends-part-2-....html">
+            
+                    
+                    Clover and friends [part 2]
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../firmware-changes....html">
+            
+                <a href="../firmware-changes....html">
+            
+                    
+                    Firmware changes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../yup-you-made-it....html">
+            
+                <a href="../yup-you-made-it....html">
+            
+                    
+                    Yup, you made it
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../posty-posty....html">
+            
+                <a href="../posty-posty....html">
+            
+                    
+                    Posty-Posty
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Clover and friends [part 1]</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="clover-and-friends-part-1">Clover and friends [part 1]</h1>
+<p>For this part of the guide you&apos;ll install and prepare clover for the ramble.</p>
+<h4 id="install-clover">Install Clover</h4>
+<ol>
+<li>For Windows, you already did with the tool before, skip to <em>Prepare Clover</em></li>
+<li>For Linux or macOS:<ol>
+<li>Download the latest <a href="https://github.com/Dids/clover-builder/releases/latest" target="_blank">Clover LZMA</a> from Dids&apos; repo (thanks bb &#x2764;&#xFE0F;)</li>
+<li>For linux, use p7zip or file roller or whatever you use, to extract the LZMA and TAR inside it until you get the iso</li>
+<li>For macOS, use <code>keka</code> (google it) or <code>The Unarchiver</code> (AppStore, Free) to extract the LZMA and TAR inside it until you get to the iso</li>
+</ol>
+</li>
+<li>Mount the ISO<ol>
+<li>On linux, use <code>mount</code> command with <code>-o loop,ro</code> or with <code>gnome-disks</code> by right-clicking the iso &gt; mount image </li>
+<li>On macOS, double click</li>
+</ol>
+</li>
+<li><p>Copy the EFI folder from the ISO to the CLOVER USB</p>
+<ol>
+<li>you should have CLOVER (USB) &gt; EFI (folder) &gt; CLOVER &amp; BOOT</li>
+</ol>
+</li>
+<li><p><em><strong>Note for macOS users</strong> who want to use <strong>legacy</strong> on the destination machine:</em></p>
+<ol>
+<li>If you&apos;re booting from UEFI on the destination go to <strong>step 2: Mount the ISO</strong> (do not follow this note)</li>
+<li>Download the pkg from the source above</li>
+<li>Open the installer</li>
+<li>Select the destination as &quot;CLOVER&quot; (USB)</li>
+<li>Select Customize</li>
+<li>Choose:<ol>
+<li>Boot Sectors : Install boot0ss in MBR</li>
+<li>Clover for BIOS (legacy) booting: Clover EFI 64-bits SATA</li>
+<li>Themes: (a theme, choose clovy)</li>
+<li>BIOS Drivers, 64 bit: ApfsDriverLoader - AppleImageLoader</li>
+<li>Uncheck the rest of there is anything checked</li>
+</ol>
+</li>
+<li>Install</li>
+<li>Go to <strong>Step 7</strong> below</li>
+</ol>
+</li>
+</ol>
+<h4 id="prepare-clover">Prepare Clover</h4>
+<ol>
+<li>Open CLOVER &gt; EFI &gt; CLOVER<ol>
+<li>delete <code>doc</code> and <code>OEM</code> (remove if any found)</li>
+<li>Make a folder named <code>ACPI</code> with subfolders: <code>origin</code> <code>patched</code> <code>WINDOWS</code> (case sensitive)</li>
+</ol>
+</li>
+<li>Clover Drivers (EFI drivers, not to be confused with kexts, which are macOS drivers)<ol>
+<li>for UEFI users:<ul>
+<li>Open <code>drivers &gt; UEFI</code>, <em>delete</em> everything, <strong>BUT</strong> <em>ApfsDriverLoader</em>  <em>- AptioMemoryFix - HFSPlus</em><ul>
+<li>(If <em>AptioMemoryFix</em> or <em>HFSPlus</em> are missing, copy them from <code>drivers &gt; off</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>for Legacy users:<ul>
+<li>go to <code>drivers &gt; BIOS</code>, keep it as it is.<ul>
+<li>(If <em>AptioMemoryFix</em> or <em>HFSPlus</em> are missing, copy them from <code>drivers &gt; off</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Delete now:<ol>
+<li>UEFI users, delete:<ol>
+<li><code>drivers &gt; BIOS</code></li>
+</ol>
+</li>
+<li>Legacy users, delete:<ol>
+<li><code>drivers &gt; UEFI</code></li>
+</ol>
+</li>
+<li>Optionally delete:<ol>
+<li><code>drivers &gt; off</code>      </li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Go to kexts &gt; Other<ul>
+<li>Go to <a href="https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw" target="_blank">Goldfish64&apos;s Kext Repo</a></li>
+<li>Download these: <em>[Note: Explore each folder and you&apos;ll find a Zip file, get that Zip file, not the whole folder]</em> <ul>
+<li><em><strong>Essential Kexts</strong> (essential for booting)</em><ul>
+<li><em><strong>VirtualSMC</strong></em> (emulates an SMC system, VSMC has higher quality code than FakeSMC, another older and long developed kext. They both do the same, so <em>do not</em>  mix them)<ul>
+<li>Use only VirtualSMC.kext (or FakeSMC.kext) in CLOVER</li>
+</ul>
+</li>
+<li><em><strong>Lilu</strong></em> (an arbitrary kext patcher, required by some other kexts like WhateverGreen, AppleALC...)</li>
+<li><em><strong>USBInjectAll</strong></em> (Injects USB information, configuration is needed)<ul>
+<li>You will probably not need <code>XHCI-Unsupported</code>, dont copy it</li>
+</ul>
+</li>
+<li><em><strong>AppleALC</strong></em> (AppleHDA patcher for audio injection, requires Lilu, it can be omitted until post install)</li>
+<li><em><strong>WhateverGreen</strong></em> (Fixes and patches a lot of graphics related issues and injections, requires Lilu)</li>
+<li><em>[optional, for desktop, <strong>CRUCIAL, for laptops</strong>]</em> <em><strong>VoodooPS2Controller</strong></em> (PS2 drivers, needed for laptops)<ul>
+<li>Note that there is an <code>acidanthera</code> fork, <strong>do not use it</strong>. Its support is quite limited to some trackpads and it might outright not work, use the other release. </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em><strong>Network Kexts</strong> (<strong>mandatory</strong>)</em><ul>
+<li><strong>AppleIntele1000</strong> for some old cards</li>
+<li><a href="https://github.com/midi1996/JBOG/blob/master/Extra/HoRNDIS.kext.zip?raw=true" target="_blank"><strong>HoRNDIS</strong></a> <em>ONLY IF YOU NEED NETWORK CONNECTION USING ANDROID</em>, use the link in the name</li>
+<li><strong>IntelMausiEthernet</strong> for most Intel NICs</li>
+<li><strong>AtherosE2200Ethernet</strong> for some Atheros/QualcommAtheros/Killer(some) NICs</li>
+<li><strong>BCM5722D</strong> for Broadcom BCM5722 NetXtreme and NetLink family</li>
+<li><strong>BCM57xx</strong> <em>(other than 5722)</em> get FakePCIID zip folder, and use FakePCIID + FakePCIID_BCM57XX_as_BCM57765</li>
+<li><strong>RealtekRTL8100</strong> for 10/100 Realtek Cards (Realtek FE)</li>
+<li><strong>RealtekRTL8111</strong> for Gigabit Realtek Cards (Realtek GbE)</li>
+<li>****<a href="https://cdn.discordapp.com/attachments/390417931659378688/556912824228773888/SmallTree-Intel-211-AT-PCIe-GBE.kext.zip" target="_blank"><strong>SmallTreeIntel211</strong></a> for some Intel ethernet chipsets (use the link in the name)<ul>
+<li><em><strong>Note:</strong> if you&apos;re not sure, LOOK FOR YOUR LAN CHIPSET AND CHECK THIS AGAIN.</em> </li>
+</ul>
+</li>
+<li><em>[Exceptionally for WiFi-only users]</em> For your compatible WiFi Card:<ul>
+<li>USB Wifi Users: <strong>NO [won&apos;t work while the install, look for the driver after the install</strong></li>
+<li>for Broadcom based chips <em>(DW1550-DW1560-DW1830...)</em>: AirPortBrcmFixUp</li>
+<li>for Atheros based chips <em>(AR5B95/195/97/197, based on AR9280/AR9285 SoC)</em>:<ul>
+<li>go to <a href="https://github.com/RehabMan/HP-ProBook-4x30s-DSDT-Patch/archive/master.zip" target="_blank">https://github.com/RehabMan/HP-ProBook-4x30s-DSDT-Patch/archive/master.zip</a></li>
+<li>extract the zip</li>
+<li>explore to <code>kexts</code></li>
+<li>get <code>ProbookAtheros.kext</code></li>
+</ul>
+</li>
+<li>for QComAtheros: <em>NOPE</em> - Change it (check AR95/4XX below)</li>
+<li>for Intel: <em>NOPE</em> - Change it</li>
+<li>for Atheros based on <em>AR95XX-AR94XX</em>: ATH9KFixUp with proper boot argument options seen in the original github <a href="https://github.com/chunnann/ATH9KFixup" target="_blank">repo</a> or rehabman&apos;s <a href="https://github.com/RehabMan/ATH9KFixup" target="_blank">fork</a> (ignore the fact that you need to install it under /S/L/E).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Extract every zip<ul>
+<li>Note: a kexts is a macOS driver, and it&apos;s in a form of a <code>a_folder_name.kext</code>, on windows it will show as a folder, on macOS it will show as a file.</li>
+</ul>
+</li>
+<li>now copy VirtualSMC.<strong>kext</strong> (or FakeSMC.kext) - Lilu.kext - WhateverGreen.kext - USBInjectAll.kext - AppleALC.kext - [your_ethernet_driver].kext (and any extra kext you needed from above) and put it in <em><strong>CLOVER (USB) &gt; EFI &gt; CLOVER &gt; kexts &gt; Other</strong></em>. <em>[skip the sensor kexts, they may cause kernel panics, aka KP. For VirtualSMC, copy over SMCProcessor if you want to, leave the rest out]</em><ol>
+<li><em>Basically what you should end up with:</em>  <code>- AppleALC.kext  - Lilu.kext  - USBInjectAll.kext  - VirtualSMC.kext  - VoodooPS2Controller.kext (laptop users)  - WhateverGreen.kext  - &lt;SomeEthernetOrWifiDriver&gt;.kext</code></li>
+</ol>
+</li>
+<li>Now you&apos;re mostly done with Clover and macOS installer preparation.</li>
+</ol>
+<p><strong>Extra note for X299 people:</strong></p>
+<p>You may need to add <code>GenericUSBXHCI</code> kext from the kext repository above, along VoodooTSCSync if you can&apos;t enable Core Syncing in your firmware, more on that <a href="https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/gathering-kexts#usb" target="_blank">here</a> [USB] and <a href="https://www.tonymacx86.com/threads/how-to-build-your-own-imac-pro-successful-build-extended-guide.229353/" target="_blank">here</a> [Go to the BIOS section, as it&apos;s the most important part of that whole talk].</p>
+<h2 id="important">Important</h2>
+<p>You must check <em><strong>[MUST READ] Config.plist Basics</strong></em> section <strong>before</strong> getting to [part 2].</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Clover Boot Manager">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="config.plist-basics....html" class="navigation navigation-next " aria-label="Next page: Config.plist Basics">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"Step 1: Prepare Clover","title":"Clover and friends [part 1]","level":"1.4.1","depth":2,"next":{"title":"Config.plist Basics","level":"1.4.2","depth":2,"path":"clover-boot-manager.../config.plist-basics....md","ref":"clover-boot-manager.../config.plist-basics....md","articles":[]},"previous":{"title":"Clover Boot Manager","level":"1.4","depth":1,"path":"clover-boot-manager.../README.md","ref":"clover-boot-manager.../README.md","articles":[{"title":"Clover and friends [part 1]","level":"1.4.1","depth":2,"path":"clover-boot-manager.../clover-and-friends....md","ref":"clover-boot-manager.../clover-and-friends....md","articles":[]},{"title":"Config.plist Basics","level":"1.4.2","depth":2,"path":"clover-boot-manager.../config.plist-basics....md","ref":"clover-boot-manager.../config.plist-basics....md","articles":[]},{"title":"Clover and friends [part 2]","level":"1.4.3","depth":2,"path":"clover-boot-manager.../clover-and-friends-part-2-....md","ref":"clover-boot-manager.../clover-and-friends-part-2-....md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"clover-boot-manager.../clover-and-friends....md","mtime":"2020-01-04T23:52:49.250Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-04T23:53:30.831Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    
+
+    </body>
+</html>
+
