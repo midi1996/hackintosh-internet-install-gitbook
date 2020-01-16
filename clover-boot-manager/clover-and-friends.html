@@ -313,11 +313,14 @@
                                 
                                 <h1 id="clover-and-friends-part-1">Clover and friends [part 1]</h1>
 <p>For this part of the guide you&apos;ll install and prepare clover for the ramble.</p>
+<p><div class="alert alert-undefined hints-alert"><div class="hints-icon"><i class="undefined"></i></div><div class="hints-container"><p>There is an issue with the latest Clover releases where the network kexts dont get injected into macOS Recovery/Installer environments. The latest known good Clover that did inject them properly is <strong>r5092</strong>. Please use this release then update it afterwards.</p>
+<p>Some users have reported <strong>r5103</strong> had this issue fixed.</p>
+</div></div></p>
 <h4 id="install-clover">Install Clover</h4>
 <ol>
 <li>For Windows, you already did with the tool before, skip to <em>Prepare Clover</em></li>
 <li>For Linux or macOS:<ol>
-<li>Download the latest <a href="https://github.com/Dids/clover-builder/releases/latest" target="_blank">Clover LZMA</a> from Dids&apos; repo (thanks bb &#x2764;&#xFE0F;)</li>
+<li>Download <del>the latest</del> Clover LZMA <a href="https://github.com/Dids/clover-builder/releases/tag/v2.5k_r5092" target="_blank">r5092</a> <a href="https://github.com/Dids/clover-builder/releases/latest" target="_blank"><del>(Clover LZMA latest)</del></a> from Dids&apos; repo (thanks bb &#x2764;&#xFE0F;)</li>
 <li>For linux, use p7zip or file roller or whatever you use, to extract the LZMA and TAR inside it until you get the iso</li>
 <li>For macOS, use <code>keka</code> (google it) or <code>The Unarchiver</code> (AppStore, Free) to extract the LZMA and TAR inside it until you get to the iso</li>
 </ol>
@@ -354,12 +357,14 @@
 </ol>
 <h4 id="prepare-clover">Prepare Clover</h4>
 <ol>
-<li>Open CLOVER &gt; EFI &gt; CLOVER<ol>
+<li><p>Open CLOVER &gt; EFI &gt; CLOVER</p>
+<ol>
 <li>delete <code>doc</code> and <code>OEM</code> (remove if any found)</li>
 <li>Make a folder named <code>ACPI</code> with subfolders: <code>origin</code> <code>patched</code> <code>WINDOWS</code> (case sensitive)</li>
 </ol>
 </li>
-<li>Clover Drivers (EFI drivers, not to be confused with kexts, which are macOS drivers)<ol>
+<li><p>Clover Drivers (EFI drivers, not to be confused with kexts, which are macOS drivers)</p>
+<ol>
 <li>for UEFI users:<ul>
 <li>Open <code>drivers &gt; UEFI</code>, <em>delete</em> everything, <strong>BUT</strong> <em>ApfsDriverLoader</em>  <em>- AptioMemoryFix - HFSPlus</em><ul>
 <li>(If <em>AptioMemoryFix</em> or <em>HFSPlus</em> are missing, copy them from <code>drivers &gt; off</code>)</li>
@@ -376,85 +381,71 @@
 </li>
 </ol>
 </li>
-<li>Delete now:<ol>
+<li><p>Delete now:</p>
+<ol>
 <li>UEFI users, delete:<ol>
 <li><code>drivers &gt; BIOS</code></li>
 </ol>
 </li>
 <li>Legacy users, delete:<ol>
-<li><code>drivers &gt; UEFI</code></li>
-</ol>
-</li>
-<li>Optionally delete:<ol>
-<li><code>drivers &gt; off</code>      </li>
+<li><code>drivers &gt; UEFI</code>      </li>
 </ol>
 </li>
 </ol>
 </li>
-<li>Go to kexts &gt; Other<ul>
-<li>Go to <a href="https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw" target="_blank">Goldfish64&apos;s Kext Repo</a></li>
-<li>Download these: <em>[Note: Explore each folder and you&apos;ll find a Zip file, get that Zip file, not the whole folder]</em> <ul>
-<li><em><strong>Essential Kexts</strong> (essential for booting)</em><ul>
-<li><em><strong>VirtualSMC</strong></em> (emulates an SMC system, VSMC has higher quality code than FakeSMC, another older and long developed kext. They both do the same, so <em>do not</em>  mix them)<ul>
-<li>Use only VirtualSMC.kext (or FakeSMC.kext) in CLOVER</li>
+<li><p>Go to kexts &gt; Other</p>
+<ul>
+<li>Go to <a href="http://kexts.goldfish64.com/" target="_blank">Goldfish64&apos;s Kext Repo</a></li>
+<li>Download these: <em>[Note: Explore each folder and you&apos;ll find a Zip file, get that Zip file, not the whole folder]</em></li>
 </ul>
 </li>
-<li><em><strong>Lilu</strong></em> (an arbitrary kext patcher, required by some other kexts like WhateverGreen, AppleALC...)</li>
-<li><em><strong>USBInjectAll</strong></em> (Injects USB information, configuration is needed)<ul>
-<li>You will probably not need <code>XHCI-Unsupported</code>, dont copy it</li>
-</ul>
-</li>
-<li><em><strong>AppleALC</strong></em> (AppleHDA patcher for audio injection, requires Lilu, it can be omitted until post install)</li>
-<li><em><strong>WhateverGreen</strong></em> (Fixes and patches a lot of graphics related issues and injections, requires Lilu)</li>
-<li><em>[optional, for desktop, <strong>CRUCIAL, for laptops</strong>]</em> <em><strong>VoodooPS2Controller</strong></em> (PS2 drivers, needed for laptops)<ul>
-<li>Note that there is an <code>acidanthera</code> fork, <strong>do not use it</strong>. Its support is quite limited to some trackpads and it might outright not work, use the other release. </li>
-</ul>
-</li>
-</ul>
-</li>
-<li><em><strong>Network Kexts</strong> (<strong>mandatory</strong>)</em><ul>
-<li><strong>AppleIntele1000</strong> for some old cards</li>
-<li><a href="https://github.com/midi1996/JBOG/blob/master/Extra/HoRNDIS.kext.zip?raw=true" target="_blank"><strong>HoRNDIS</strong></a> <em>ONLY IF YOU NEED NETWORK CONNECTION USING ANDROID</em>, use the link in the name</li>
-<li><strong>IntelMausiEthernet</strong> for most Intel NICs</li>
-<li><strong>AtherosE2200Ethernet</strong> for some Atheros/QualcommAtheros/Killer(some) NICs</li>
-<li><strong>BCM5722D</strong> for Broadcom BCM5722 NetXtreme and NetLink family</li>
-<li><strong>BCM57xx</strong> <em>(other than 5722)</em> get FakePCIID zip folder, and use FakePCIID + FakePCIID_BCM57XX_as_BCM57765</li>
-<li><strong>RealtekRTL8100</strong> for 10/100 Realtek Cards (Realtek FE)</li>
-<li><strong>RealtekRTL8111</strong> for Gigabit Realtek Cards (Realtek GbE)</li>
-<li>****<a href="https://cdn.discordapp.com/attachments/390417931659378688/556912824228773888/SmallTree-Intel-211-AT-PCIe-GBE.kext.zip" target="_blank"><strong>SmallTreeIntel211</strong></a> for some Intel ethernet chipsets (use the link in the name)<ul>
-<li><em><strong>Note:</strong> if you&apos;re not sure, LOOK FOR YOUR LAN CHIPSET AND CHECK THIS AGAIN.</em> </li>
-</ul>
-</li>
-<li><em>[Exceptionally for WiFi-only users]</em> For your compatible WiFi Card:<ul>
-<li>USB Wifi Users: <strong>NO [won&apos;t work while the install, look for the driver after the install</strong></li>
-<li>for Broadcom based chips <em>(DW1550-DW1560-DW1830...)</em>: AirPortBrcmFixUp</li>
-<li>for Atheros based chips <em>(AR5B95/195/97/197, based on AR9280/AR9285 SoC)</em>:<ul>
-<li>go to <a href="https://github.com/RehabMan/HP-ProBook-4x30s-DSDT-Patch/archive/master.zip" target="_blank">https://github.com/RehabMan/HP-ProBook-4x30s-DSDT-Patch/archive/master.zip</a></li>
-<li>extract the zip</li>
-<li>explore to <code>kexts</code></li>
-<li>get <code>ProbookAtheros.kext</code></li>
-</ul>
-</li>
-<li>for QComAtheros: <em>NOPE</em> - Change it (check AR95/4XX below)</li>
-<li>for Intel: <em>NOPE</em> - Change it</li>
-<li>for Atheros based on <em>AR95XX-AR94XX</em>: ATH9KFixUp with proper boot argument options seen in the original github <a href="https://github.com/chunnann/ATH9KFixup" target="_blank">repo</a> or rehabman&apos;s <a href="https://github.com/RehabMan/ATH9KFixup" target="_blank">fork</a> (ignore the fact that you need to install it under /S/L/E).</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Extract every zip<ul>
+<li><p>Extract every zip</p>
+<ul>
 <li>Note: a kexts is a macOS driver, and it&apos;s in a form of a <code>a_folder_name.kext</code>, on windows it will show as a folder, on macOS it will show as a file.</li>
 </ul>
 </li>
-<li>now copy VirtualSMC.<strong>kext</strong> (or FakeSMC.kext) - Lilu.kext - WhateverGreen.kext - USBInjectAll.kext - AppleALC.kext - [your_ethernet_driver].kext (and any extra kext you needed from above) and put it in <em><strong>CLOVER (USB) &gt; EFI &gt; CLOVER &gt; kexts &gt; Other</strong></em>. <em>[skip the sensor kexts, they may cause kernel panics, aka KP. For VirtualSMC, copy over SMCProcessor if you want to, leave the rest out]</em><ol>
-<li><em>Basically what you should end up with:</em>  <code>- AppleALC.kext  - Lilu.kext  - USBInjectAll.kext  - VirtualSMC.kext  - VoodooPS2Controller.kext (laptop users)  - WhateverGreen.kext  - &lt;SomeEthernetOrWifiDriver&gt;.kext</code></li>
-</ol>
+<li><p>now copy VirtualSMC.<strong>kext</strong> (or FakeSMC.kext) - Lilu.kext - WhateverGreen.kext - USBInjectAll.kext - AppleALC.kext - [your_ethernet_driver].kext (and any extra kext you needed from above) and put it in <em><strong>CLOVER (USB) &gt; EFI &gt; CLOVER &gt; kexts &gt; Other</strong></em>. <em>[skip the sensor kexts, they may cause kernel panics, aka KP. For VirtualSMC, copy over SMCProcessor if you want to, leave the rest out]</em></p>
+<p><strong>NECESSARY KEXTS</strong></p>
+<p>| Kext                | Mandatory                                       | Description                                                  |
+| ------------------- | ----------------------------------------------- | ------------------------------------------------------------ |
+| Lilu                | &#x2705;                                               | An open source kernel extension bringing a platform for arbitrary kext, library, and program patching throughout the system for macOS. |
+| VirtualSMC          | &#x2705; Better with Lilu                              | Advanced Apple SMC emulator in the kernel.                   |
+| WhateverGreen       | &#x2705; Requires Lilu                                 | Various patches necessary for certain ATI/AMD/Intel/Nvidia GPUs |
+| USBInjectAll        | &#x2705; (may get deprecated soon&#x2122;&#xFE0F;)                    | Kext to inject all USB ports for the installed Intel EHCI/XHCI chipset automatically. |
+| VoodooPS2Controller | &#x2705; for laptops and desktops with PS2 peripherals | Enables PS/2 Support on macOS.                               |</p>
+<p><strong>NETWORK KEXT</strong></p>
+<p>| Wired Network Kext   | Devices to use with                                          |
+| -------------------- | ------------------------------------------------------------ |
+| AppleIntele1000      | Old Intel Cards (IntelMausi should be better)                |
+| HoRNDIS              | Android RNDIS Tethering. <a href="https://github.com/midi1996/JBOG/blob/master/Extra/HoRNDIS.kext.zip?raw=true" target="_blank">Pre-compiled kext only</a> and <a href="https://joshuawise.com/horndis" target="_blank">official website</a> to get the latest release whenever possible. |
+| IntelMausi           | For most Intel NICs                                          |
+| AtherosE2200Ethernet | For some Atheros/QualcommAtheros/Killer(some) NICs         |
+| BCM5722D             | For Broadcom BCM5722 NetXtreme and NetLink family            |
+| BCM57xx              | <em>(other than 5722)</em> get FakePCIID zip folder, and use FakePCIID + FakePCIID_BCM57XX_as_BCM57765 |
+| RealtekRTL8100       | For 10/100 Realtek Cards (Realtek FE)                      |
+| RealtekRTL8111       | For Gigabit Realtek Cards (Realtek GbE)                    |
+| SmallTreeIntel211    | for some Intel ethernet chipsets, <a href="https://cdn.discordapp.com/attachments/390417931659378688/556912824228773888/SmallTree-Intel-211-AT-PCIe-GBE.kext.zip" target="_blank">link for the binary</a>. |</p>
+<p>| Wireless Kext       | Devices to use with                                          |
+| ------------------- | ------------------------------------------------------------ |
+| ----                | USB Wifi Users: <strong>NO [won&apos;t work while the install, look for the driver after the install</strong> |
+| AirPortBrcmFixUp    | For Broadcom chipsets: BCM4360, BCM4352, BCM4350 (found in DW1830, DW1560, DW1820A -- not recommended card --, Apple BRCM94360CS2/2CS/CD) |
+| ProbookAtheros.kext | for Atheros based chips <em>(AR5B95/195/97/197, based on AR9280/AR9285 SoC)</em>:<br>           <em> go to <a href="https://github.com/RehabMan/HP-ProBook-4x30s-DSDT-Patch/archive/master.zip" target="_blank">HP Probook 4x30 DSDT Patch</a><br>           </em> extract the zip<br>           <em> explore to <code>kexts</code><br>           </em> get <code>ProbookAtheros.kext</code><br><strong>The kext will not work on Catalina/Mojave anymore, AppleAtheros40 kext has been deprecated in 10.14+ and will need special workaround that will not work in a recovery environment.</strong> |
+| ----                | Intel: <em>NOPE</em> - Change it                                    |
+| ----                | QComAtheros: <em>NOPE</em> - Change it                              |
+| ATH9KFixUp          | for Atheros based on <em>AR95XX-AR94XX</em>: ATH9KFixUp with proper boot argument options seen in the original github <a href="https://github.com/chunnann/ATH9KFixup" target="_blank">repo</a> or rehabman&apos;s <a href="https://github.com/RehabMan/ATH9KFixup" target="_blank">fork</a> (DO NOT install it in /S/L/E, just use Clover&apos;s folder).<br><strong>The kext will not work on Catalina/Mojave anymore, AppleAtheros40 kext has been deprecated in 10.14+ and will need special workaround that will not work in a recovery environment.</strong> |</p>
 </li>
-<li>Now you&apos;re mostly done with Clover and macOS installer preparation.</li>
+<li><p><strong>Basically what you should end up with</strong>:</p>
+<ul>
+<li>Lilu.kext</li>
+<li>VirtualSMC.kext</li>
+<li>WhateverGreen.kext</li>
+<li>USBInjectAll.kext</li>
+<li>VoodooPS2Controller.kext (for laptops and PS2 users)</li>
+<li><strong>a network driver</strong>.kext</li>
+</ul>
+</li>
+<li><p>Now you&apos;re mostly done with Clover and macOS installer preparation.</p>
+</li>
 </ol>
 <p><strong>Extra note for X299 people:</strong></p>
 <p>You may need to add <code>GenericUSBXHCI</code> kext from the kext repository above, along VoodooTSCSync if you can&apos;t enable Core Syncing in your firmware, more on that <a href="https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/gathering-kexts#usb" target="_blank">here</a> [USB] and <a href="https://www.tonymacx86.com/threads/how-to-build-your-own-imac-pro-successful-build-extended-guide.229353/" target="_blank">here</a> [Go to the BIOS section, as it&apos;s the most important part of that whole talk].</p>
@@ -503,7 +494,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"Step 1: Prepare Clover","title":"Clover and friends [part 1]","level":"1.4.1","depth":2,"next":{"title":"Config.plist Basics","level":"1.4.2","depth":2,"path":"clover-boot-manager/config.plist-basics.md","ref":"clover-boot-manager/config.plist-basics.md","articles":[]},"previous":{"title":"Clover Boot Manager","level":"1.4","depth":1,"path":"clover-boot-manager/README.md","ref":"clover-boot-manager/README.md","articles":[{"title":"Clover and friends [part 1]","level":"1.4.1","depth":2,"path":"clover-boot-manager/clover-and-friends.md","ref":"clover-boot-manager/clover-and-friends.md","articles":[]},{"title":"Config.plist Basics","level":"1.4.2","depth":2,"path":"clover-boot-manager/config.plist-basics.md","ref":"clover-boot-manager/config.plist-basics.md","articles":[]},{"title":"Clover and friends [part 2]","level":"1.4.3","depth":2,"path":"clover-boot-manager/clover-and-friends-part-2.md","ref":"clover-boot-manager/clover-and-friends-part-2.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"clover-boot-manager/clover-and-friends.md","mtime":"2020-01-05T22:36:35.600Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-05T22:37:16.428Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"Step 1: Prepare Clover","title":"Clover and friends [part 1]","level":"1.4.1","depth":2,"next":{"title":"Config.plist Basics","level":"1.4.2","depth":2,"path":"clover-boot-manager/config.plist-basics.md","ref":"clover-boot-manager/config.plist-basics.md","articles":[]},"previous":{"title":"Clover Boot Manager","level":"1.4","depth":1,"path":"clover-boot-manager/README.md","ref":"clover-boot-manager/README.md","articles":[{"title":"Clover and friends [part 1]","level":"1.4.1","depth":2,"path":"clover-boot-manager/clover-and-friends.md","ref":"clover-boot-manager/clover-and-friends.md","articles":[]},{"title":"Config.plist Basics","level":"1.4.2","depth":2,"path":"clover-boot-manager/config.plist-basics.md","ref":"clover-boot-manager/config.plist-basics.md","articles":[]},{"title":"Clover and friends [part 2]","level":"1.4.3","depth":2,"path":"clover-boot-manager/clover-and-friends-part-2.md","ref":"clover-boot-manager/clover-and-friends-part-2.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"clover-boot-manager/clover-and-friends.md","mtime":"2020-01-16T16:02:27.027Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-16T16:03:15.399Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
