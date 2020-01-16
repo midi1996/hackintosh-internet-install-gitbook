@@ -4,6 +4,8 @@ Some people can't just get the Vanilla guide from /r/Hackintosh working just rig
 
 It happens that real macs can re-install macOS directly from the internet, without the need for a disk or installer support, and they do that through "Internet Recovery". When a mac finds no OS or recovery partition, it will try to load a recovery system from Apple's servers and then boot it then install macOS through the internet to the mac. And following the same idea, we can, as hackintoshers, do the same \(sort of\). Btw, did I tell you this guide will work on any OS?
 
+If you're here from gitbook, I'm moving this guide to Github Pages, use this [**LINK**](https://midi1996.github.io/hackintosh-internet-install-gitbook/) for the new layout (has dark theme, so you know it's 10/10). 
+
 #### How does it work?
 
 So this procedure goes mainly like this

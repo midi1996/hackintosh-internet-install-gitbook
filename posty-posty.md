@@ -4,11 +4,14 @@ Now that's installed, here are some useful links for post install \(and also con
 
 ## Desktops
 
-* **/u/corpnewt vanilla guide:** [https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide)
+* **/u/corpnewt Clover Vanilla Guide:** [https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide)
+* **Hackintosh Slav OpenCore Guide:** [https://khronokernel.github.io/Opencore-Vanilla-Desktop-Guide/](https://khronokernel.github.io/Opencore-Vanilla-Desktop-Guide/)
 
 ## Laptop 
 
-* **Laptop install guide \[pre and post\]:** [https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/)
+* **Fewtarius Laptop Guide:** [https://fewtarius.gitbook.io/laptopguide/](https://fewtarius.gitbook.io/laptopguide/)
+
+* **Laptop install guide \[OLD, check above\]:** [https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/)
 * **Laptop Rehabman FAQ:** [https://www.tonymacx86.com/threads/faq-read-first-laptop-frequent-questions.164990/](https://www.tonymacx86.com/threads/faq-read-first-laptop-frequent-questions.164990/)
 * **Laptop common issues:** [https://www.tonymacx86.com/threads/readme-common-problems-changes-fixes-on-mojave.255823/](https://www.tonymacx86.com/threads/readme-common-problems-changes-fixes-on-mojave.255823/)
 * **Laptop backlight:** [https://www.tonymacx86.com/threads/guide-laptop-backlight-control-using-applebacklightinjector-kext.218222/](https://www.tonymacx86.com/threads/guide-laptop-backlight-control-using-applebacklightinjector-kext.218222/)
@@ -22,12 +25,11 @@ Now that's installed, here are some useful links for post install \(and also con
 
 ## For either:
 
-* USBMap:
-  * Map your USB ports so that you dont need the USB kext patch \(and may probably fix sleep/wake for some\)
-    * Guide \[first\]: [https://usb-map.gitbook.io/project/](https://usb-map.gitbook.io/project/)
-    * Tool \[second\]: [https://github.com/corpnewt/USBMap](https://github.com/corpnewt/USBMap)
-* \[GPU\] WhateverGreen Patching:
-  * \[TMX, has more activity\]: [https://www.tonymacx86.com/threads/guide-intel-framebuffer-patching-using-whatevergreen.256490/](https://www.tonymacx86.com/threads/guide-intel-framebuffer-patching-using-whatevergreen.256490/)
-  * \[IM, eh?\]: [https://www.insanelymac.com/forum/topic/334899-intel-framebuffer-patching-using-whatevergreen/](https://www.insanelymac.com/forum/topic/334899-intel-framebuffer-patching-using-whatevergreen/)
-* /r/Hackintosh Discord Server: [http://discord.io/hackintosh](http://discord.io/hackintosh) _\[Dont you dare PM me\]_
-
+- [OpenCore Configuration](https://github.com/acidanthera/OpenCorePkg/raw/master/Docs/Configuration.pdf)
+- Acidanthera's
+  - WhateverGreen [documentation](https://github.com/acidanthera/WhateverGreen/tree/master/Manual)
+  - AppleALC [wiki](https://github.com/acidanthera/AppleALC/wiki)
+- Osy's
+  - [HDA Fix](https://osy.gitbook.io/hac-mini-guide/details/hda-fix)
+  - [Thunderbolt shenanigans](https://osy.gitbook.io/hac-mini-guide/details/thunderbolt-3-fix) (good bed time stories)
+- VoodooI2C's [documentation](https://voodooi2c.github.io/#index)
