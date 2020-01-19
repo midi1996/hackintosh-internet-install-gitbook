@@ -39,6 +39,7 @@ OK. So this thing requires a lot of stuff to prepare.
   * And **15GB** of free space on the drive you're working on. On Windows, your OS disk must have 15GB free at least
 * Some googling skills, which a lot of you lack sadly.
 * **Brain** cells and patience and reading capabilities _**\[CRUCIAL\]**_
+  * Some say that 2 neurons are enough.
 
 ### Non-physical requirements
 

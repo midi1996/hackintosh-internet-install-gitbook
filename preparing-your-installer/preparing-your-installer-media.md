@@ -18,7 +18,7 @@ Some users have reported **r5103** had this issue fixed.
 
 Inside the same folder of gibMacOS, you'll find a cute `MakeInstall.bat` , double click it, accept UAC admin user, you'll be greeted by a CMD screen. The software will download software needed \(`dd` port for windows and 7-zip\). Then you'll be greeted with a list of drives:
 
-![](../.gitbook/assets/cmdwin.png)
+![](../gitbook/assets/cmdwin.png)
 
 * **Carefully** choose your drive \(look for the size, name or other features that points to your USB device\).
 * type in its number
@@ -26,7 +26,7 @@ Inside the same folder of gibMacOS, you'll find a cute `MakeInstall.bat` , doubl
 * You'll be asked to drop the Recovery image path, go to `macOS downloads` and explore its folders, until you get to a file with `.pkg` in the end, named either `RecoveryHDMetaDmg` or `RecoveryHDUpdate` \(depending on your macOS version\).
 * Drag-n-Drop **will not work**, so the workaround is `Shift` + _Right click_ on the file, then select `Copy as Path` as shown here
 
-![](../.gitbook/assets/cap.png)
+![](../gitbook/assets/cap.png)
 
 * Note: you can just paste the path of the parent folder of the pkg file \(found in `macOS downloads` &gt; `publicrelease` \(if you used another channel, go to that channel\) `<your macOS version folder>` \) and the script will look for the pkg.
 * then paste it in the CMD window \(by Right Clicking in the window, this will paste what's in the clip board\)

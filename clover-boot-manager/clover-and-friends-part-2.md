@@ -10,27 +10,7 @@ There are two section: **LAPTOPS** and **DESKTOPS**. Pick the one for you setup.
 
 ## For lappies:
 
-Got to [Rehabman config.plist repository](https://github.com/RehabMan/OS-X-Clover-Laptop-Config) and get a fitting config from the list to your hardware configuration. \[Hint: Check your intel GPU, if you dont have one, check the intel GPU that _should_ be with your CPU\]
-
-1. Download **ProperTree**: [https://github.com/corpnewt/ProperTree](https://github.com/corpnewt/ProperTree)
-   * Use this to edit any plist file 👌, and it's crossplatform
-2. Open ProperTree.cmd
-3. File &gt; Open &gt; path to the chosen config.plist
-4. Boot\Arguments:
-   * add `-v debug=0x100 keepsyms=1`
-
-Then, File &gt; Save the file, rename and copy the resulting plist file to `config.plist` and paste it in CLOVER \(partition\)&gt; EFI &gt; CLOVER and replace the one already there.
-
-{% hint style="info" %}
-### Tips:
-
-* _**In case**_ you have a USB3.0 drive, add `-uia_exclude_hs` to the `Boot > Arguments`, this will disable your HS ports from your USB3.0 ports \(basically, you will not be able to use USB2.0 devices on those ports\)
-  * However, **if you're using a USB mouse/keyboard** you **must not** use that argument, instead, fetch for a USB2.0 cable extender or a USB2.0 _drive_ and boot from it.
-* _**In case**_ you need USB2.0 ports for mouse/keyboard \(for people with I2C touchpads or broken keyboards\) and only have USB3.0 drive, either: 
-  * Use a USB2.0 cable extender \(this will force the USB3.0 flash drive to be on USB2.0 mode\)
-  * Look for a USB2.0 drive
-* For people with **Broadwell \(5th Gen Intel CPUs\) and older,** you have two sets of USB Controllers: _EHCI_ and _XHCI_. You will only use **XHCI** controller since the **EHCI** controller will be disabled. How should you know which port is connected to which? Look for USB3.0 ports \(named SS USB, has 4+5 sets of pins or is blue, and probably have a SS logo/name\) and plug your USB there.
-{% endhint %}
+Follow [**Fewtarius's Laptop Guide**](https://fewtarius.gitbook.io/laptopguide/prepare-install-macos/macos-memory-allocation), this part will start from the beginning with Clover drivers and stuff, do follow it properly.
 
 ## For deskies:
 
@@ -50,6 +30,12 @@ Then, File &gt; Save the file, rename and copy the resulting plist file to `conf
 5. Under Devices:
    * USB: Inject - Add Clock ID - Fix Ownership
    * Audio: Inject : 1 \(type it inside Layout ID\)
+   * Properties: follow the platform that suites you if you're using an intel GPU:
+      * For [IvyBidge](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/ivy-bridge#properties)
+      * For [Haswell ](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/haswell#properties)\*
+      * For [Skylake ](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/skylake#properties)\* 
+      * For [KabyLake ](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/kaby-lake#properties)\*
+      * For [CoffeeLake ](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake#properties)\*
 6. Under GUI:
    * Scan Options: Custom - Scan Entries - Scan Tools - Scan Kernel: Disabled - Scan Legacy: Disabled.
    * \[optional\] Mouse: Enabled
@@ -87,33 +73,7 @@ Then, File &gt; Save the file, rename and copy the resulting plist file to `conf
 15. name: `config` \(no extension\)
 16. Download
 17. Save
-18. \[If you're using intel GPU\] Download **ProperTree**: [https://github.com/corpnewt/ProperTree](https://github.com/corpnewt/ProperTree)
-    * Use this to edit any plist file 👌, and it's crossplatform 
-    * \[If you're using intel GPU\] Open ProperTree.bat \(or run `python ProperTree.command`\)
-      1. File &gt; Open &gt; config.plist \(the one you downloaded\)
-      2. Expand `Devices`
-         1. Add Child \(press + key on expanded `Devices`, or right click &gt; add child\)
-            * Key: Properties
-            * Type: Dictionary
-         2. Add Child under Properties \(press + key\)
-            * Key: `PciRoot(0x0)/Pci(0x2,0x0)`
-            * Type: Dictionary
-         3. Add Child under PciRoot\(0x0\)/Pci\(0x2,0x0\) \(press + key\)
-            * Key: `AAPL,ig-platform-id`
-            * Type: Data
-            * Value: _\[Check these links\]_
-              * For [IvyBidge](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/ivy-bridge#properties)
-              * For [Haswell ](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/haswell#properties)\*
-              * For [Skylake ](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/skylake#properties)\* 
-              * For [KabyLake ](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/kaby-lake#properties)\*
-              * For [CoffeeLake ](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake#properties)\*
-                * \(\*\) For some of these setups, you'll be also invited to add other values next to `AAPL,ig-platform-id`, just highlight the entry in the config and press `+` key to add a sibling, and add all the data you need \(examples of the extra information: `device-id`, `framebuffer-patch*` for framebuffer entries.
-                * What you need to do is read that explanation and check the sections above it to fill in the blank in your config \(device-id, AAPL, ig-platform-id, and so on\). You'll have to use some brain power \(not really\) to get that.
-            * Check the screenshot bellow to see how it should look like
-      3. File &gt; Save As &gt; path/to/CLOVER/partition/EFI/CLOVER/ &gt; Name: `config.plist`
-19. Rename and copy the resulting plist file and paste it in CLOVER \(partition\)&gt; EFI &gt; CLOVER and replace the one already there \(you have already done this if you followed the intel GPU section\).
-
-![Screenshot of ProperTree in action.](../.gitbook/assets/image%20%285%29.png)
+18. Rename and copy the resulting plist file and paste it in CLOVER \(partition\)&gt; EFI &gt; CLOVER and replace the one already there.
 
 **NOTE**: to understand any of these options you **must** read this guide: [https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/). This guide gathers information and explanations for most of the hackintoshing process. Use it as an information base and guide if needed.  
   
