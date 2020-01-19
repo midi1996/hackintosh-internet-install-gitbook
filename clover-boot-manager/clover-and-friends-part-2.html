@@ -315,34 +315,7 @@
 <p>Now your USB has clover and a macOS recovery. For the second part we will create a config.plist.</p>
 <p>There are two section: <strong>LAPTOPS</strong> and <strong>DESKTOPS</strong>. Pick the one for you setup.</p>
 <h2 id="for-lappies">For lappies:</h2>
-<p>Got to <a href="https://github.com/RehabMan/OS-X-Clover-Laptop-Config" target="_blank">Rehabman config.plist repository</a> and get a fitting config from the list to your hardware configuration. [Hint: Check your intel GPU, if you dont have one, check the intel GPU that <em>should</em> be with your CPU]</p>
-<ol>
-<li>Download <strong>ProperTree</strong>: <a href="https://github.com/corpnewt/ProperTree" target="_blank">https://github.com/corpnewt/ProperTree</a><ul>
-<li>Use this to edit any plist file &#x1F44C;, and it&apos;s crossplatform</li>
-</ul>
-</li>
-<li>Open ProperTree.cmd</li>
-<li>File &gt; Open &gt; path to the chosen config.plist</li>
-<li>Boot\Arguments:<ul>
-<li>add <code>-v debug=0x100 keepsyms=1</code></li>
-</ul>
-</li>
-</ol>
-<p>Then, File &gt; Save the file, rename and copy the resulting plist file to <code>config.plist</code> and paste it in CLOVER (partition)&gt; EFI &gt; CLOVER and replace the one already there.</p>
-<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><h3 id="tips">Tips:</h3>
-<ul>
-<li><em><strong>In case</strong></em> you have a USB3.0 drive, add <code>-uia_exclude_hs</code> to the <code>Boot &gt; Arguments</code>, this will disable your HS ports from your USB3.0 ports (basically, you will not be able to use USB2.0 devices on those ports)<ul>
-<li>However, <strong>if you&apos;re using a USB mouse/keyboard</strong> you <strong>must not</strong> use that argument, instead, fetch for a USB2.0 cable extender or a USB2.0 <em>drive</em> and boot from it.</li>
-</ul>
-</li>
-<li><em><strong>In case</strong></em> you need USB2.0 ports for mouse/keyboard (for people with I2C touchpads or broken keyboards) and only have USB3.0 drive, either: <ul>
-<li>Use a USB2.0 cable extender (this will force the USB3.0 flash drive to be on USB2.0 mode)</li>
-<li>Look for a USB2.0 drive</li>
-</ul>
-</li>
-<li>For people with <strong>Broadwell (5th Gen Intel CPUs) and older,</strong> you have two sets of USB Controllers: <em>EHCI</em> and <em>XHCI</em>. You will only use <strong>XHCI</strong> controller since the <strong>EHCI</strong> controller will be disabled. How should you know which port is connected to which? Look for USB3.0 ports (named SS USB, has 4+5 sets of pins or is blue, and probably have a SS logo/name) and plug your USB there.</li>
-</ul>
-</div></div></p>
+<p>Follow <a href="https://fewtarius.gitbook.io/laptopguide/prepare-install-macos/macos-memory-allocation" target="_blank"><strong>Fewtarius&apos;s Laptop Guide</strong></a>, this part will start from the beginning with Clover drivers and stuff, do follow it properly.</p>
 <h2 id="for-deskies">For deskies:</h2>
 <p><strong>NOTE:</strong> <em><strong>This is a brief and limited guiding to get booting and running. This is not meant to be the final config. Check the link at the end if this part to understand what&apos;s going on.</strong></em></p>
 <ol>
@@ -364,6 +337,14 @@
 <li>Under Devices:<ul>
 <li>USB: Inject - Add Clock ID - Fix Ownership</li>
 <li>Audio: Inject : 1 (type it inside Layout ID)</li>
+<li>Properties: follow the platform that suites you if you&apos;re using an intel GPU:<ul>
+<li>For <a href="https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/ivy-bridge#properties" target="_blank">IvyBidge</a></li>
+<li>For <a href="https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/haswell#properties" target="_blank">Haswell </a>*</li>
+<li>For <a href="https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/skylake#properties" target="_blank">Skylake </a>* </li>
+<li>For <a href="https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/kaby-lake#properties" target="_blank">KabyLake </a>*</li>
+<li>For <a href="https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake#properties" target="_blank">CoffeeLake </a>*</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Under GUI:<ul>
@@ -421,49 +402,8 @@
 <li>name: <code>config</code> (no extension)</li>
 <li>Download</li>
 <li>Save</li>
-<li>[If you&apos;re using intel GPU] Download <strong>ProperTree</strong>: <a href="https://github.com/corpnewt/ProperTree" target="_blank">https://github.com/corpnewt/ProperTree</a><ul>
-<li>Use this to edit any plist file &#x1F44C;, and it&apos;s crossplatform </li>
-<li>[If you&apos;re using intel GPU] Open ProperTree.bat (or run <code>python ProperTree.command</code>)<ol>
-<li>File &gt; Open &gt; config.plist (the one you downloaded)</li>
-<li>Expand <code>Devices</code><ol>
-<li>Add Child (press + key on expanded <code>Devices</code>, or right click &gt; add child)<ul>
-<li>Key: Properties</li>
-<li>Type: Dictionary</li>
-</ul>
-</li>
-<li>Add Child under Properties (press + key)<ul>
-<li>Key: <code>PciRoot(0x0)/Pci(0x2,0x0)</code></li>
-<li>Type: Dictionary</li>
-</ul>
-</li>
-<li>Add Child under PciRoot(0x0)/Pci(0x2,0x0) (press + key)<ul>
-<li>Key: <code>AAPL,ig-platform-id</code></li>
-<li>Type: Data</li>
-<li>Value: <em>[Check these links]</em><ul>
-<li>For <a href="https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/ivy-bridge#properties" target="_blank">IvyBidge</a></li>
-<li>For <a href="https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/haswell#properties" target="_blank">Haswell </a>*</li>
-<li>For <a href="https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/skylake#properties" target="_blank">Skylake </a>* </li>
-<li>For <a href="https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/kaby-lake#properties" target="_blank">KabyLake </a>*</li>
-<li>For <a href="https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake#properties" target="_blank">CoffeeLake </a>*<ul>
-<li>(*) For some of these setups, you&apos;ll be also invited to add other values next to <code>AAPL,ig-platform-id</code>, just highlight the entry in the config and press <code>+</code> key to add a sibling, and add all the data you need (examples of the extra information: <code>device-id</code>, <code>framebuffer-patch*</code> for framebuffer entries.</li>
-<li>What you need to do is read that explanation and check the sections above it to fill in the blank in your config (device-id, AAPL, ig-platform-id, and so on). You&apos;ll have to use some brain power (not really) to get that.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Check the screenshot bellow to see how it should look like</li>
-</ul>
-</li>
+<li>Rename and copy the resulting plist file and paste it in CLOVER (partition)&gt; EFI &gt; CLOVER and replace the one already there.</li>
 </ol>
-</li>
-<li>File &gt; Save As &gt; path/to/CLOVER/partition/EFI/CLOVER/ &gt; Name: <code>config.plist</code></li>
-</ol>
-</li>
-</ul>
-</li>
-<li>Rename and copy the resulting plist file and paste it in CLOVER (partition)&gt; EFI &gt; CLOVER and replace the one already there (you have already done this if you followed the intel GPU section).</li>
-</ol>
-<p><img src="../.gitbook/assets/image%20%285%29.png" alt="Screenshot of ProperTree in action."></p>
 <p><strong>NOTE</strong>: to understand any of these options you <strong>must</strong> read this guide: <a href="https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/" target="_blank">https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/</a>. This guide gathers information and explanations for most of the hackintoshing process. Use it as an information base and guide if needed.  </p>
 <p>This can be also done with CCE.</p>
 
@@ -509,7 +449,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"Step 3: Configuring Clover","title":"Clover and friends [part 2]","level":"1.4.3","depth":2,"next":{"title":"Firmware changes","level":"1.5","depth":1,"path":"firmware-changes.md","ref":"firmware-changes.md","articles":[]},"previous":{"title":"Config.plist Basics","level":"1.4.2","depth":2,"path":"clover-boot-manager/config.plist-basics.md","ref":"clover-boot-manager/config.plist-basics.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"clover-boot-manager/clover-and-friends-part-2.md","mtime":"2020-01-16T16:02:27.027Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-16T16:03:15.399Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"Step 3: Configuring Clover","title":"Clover and friends [part 2]","level":"1.4.3","depth":2,"next":{"title":"Firmware changes","level":"1.5","depth":1,"path":"firmware-changes.md","ref":"firmware-changes.md","articles":[]},"previous":{"title":"Config.plist Basics","level":"1.4.2","depth":2,"path":"clover-boot-manager/config.plist-basics.md","ref":"clover-boot-manager/config.plist-basics.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":13,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"clover-boot-manager/clover-and-friends-part-2.md","mtime":"2020-01-19T20:41:19.393Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-19T20:42:03.840Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
