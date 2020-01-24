@@ -395,16 +395,13 @@
 </li>
 </ol>
 <h4 id="prepare-macos-kexts">Prepare macOS Kexts</h4>
-<ol>
-<li><p>Go to kexts &gt; Other</p>
+<p>Go to kexts &gt; Other</p>
 <ul>
 <li><p>Go to <a href="http://kexts.goldfish64.com/" target="_blank">Goldfish64&apos;s Kext Repo</a></p>
 </li>
 <li><p>Download these: [Note: Explore each folder and you&apos;ll find a Zip file, get that Zip file, not the whole folder]</p>
 </li>
 </ul>
-</li>
-</ol>
 <p><strong>NECESSARY KEXTS</strong></p>
 <table>
 <thead>
@@ -529,7 +526,7 @@
 <li>Note: a kexts is a macOS driver, and it&apos;s in a form of a <code>a_folder_name.kext</code>, on windows it will show as a folder, on macOS it will show as a file.</li>
 </ul>
 </li>
-<li><p>now copy VirtualSMC.<strong>kext</strong> (or FakeSMC.kext) - Lilu.kext - WhateverGreen.kext - USBInjectAll.kext - AppleALC.kext - [your_ethernet_driver].kext (and any extra kext you needed from above) and put it in <em><strong>CLOVER (USB) &gt; EFI &gt; CLOVER &gt; kexts &gt; Other</strong></em>. <em>[skip the sensor kexts, they may cause kernel panics, aka KP. For VirtualSMC, copy over SMCProcessor if you want to, leave the rest out]</em></p>
+<li><p>Now copy: VirtualSMC.kext - Lilu.kext - WhateverGreen.kext - USBInjectAll.kext - AppleALC.kext - [your_ethernet_driver].kext (and any extra kext you needed from above) and put it in <em><strong>CLOVER (USB) &gt; EFI &gt; CLOVER &gt; kexts &gt; Other</strong></em>. <em>[skip the sensor kexts, they may cause kernel panics, aka KP. For VirtualSMC, copy over SMCProcessor if you want to, leave the rest out]</em></p>
 </li>
 <li><p><strong>Basically what you should end up with</strong>:</p>
 <ul>
@@ -539,6 +536,7 @@
 <li>USBInjectAll.kext</li>
 <li>VoodooPS2Controller.kext (for laptops and PS2 users)</li>
 <li><strong>a network driver</strong>.kext</li>
+<li><strong>other kext if needed</strong>.kext</li>
 </ul>
 </li>
 <li><p>Now you&apos;re mostly done with Clover and macOS installer preparation.</p>
@@ -591,7 +589,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"Step 1: Prepare Clover","title":"Clover and friends [part 1]","level":"1.4.1","depth":2,"next":{"title":"Config.plist Basics","level":"1.4.2","depth":2,"path":"clover-boot-manager/config.plist-basics.md","ref":"clover-boot-manager/config.plist-basics.md","articles":[]},"previous":{"title":"Clover Boot Manager","level":"1.4","depth":1,"path":"clover-boot-manager/README.md","ref":"clover-boot-manager/README.md","articles":[{"title":"Clover and friends [part 1]","level":"1.4.1","depth":2,"path":"clover-boot-manager/clover-and-friends.md","ref":"clover-boot-manager/clover-and-friends.md","articles":[]},{"title":"Config.plist Basics","level":"1.4.2","depth":2,"path":"clover-boot-manager/config.plist-basics.md","ref":"clover-boot-manager/config.plist-basics.md","articles":[]},{"title":"Clover and friends [part 2]","level":"1.4.3","depth":2,"path":"clover-boot-manager/clover-and-friends-part-2.md","ref":"clover-boot-manager/clover-and-friends-part-2.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":13,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"clover-boot-manager/clover-and-friends.md","mtime":"2020-01-24T00:27:37.021Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-24T00:28:19.518Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"Step 1: Prepare Clover","title":"Clover and friends [part 1]","level":"1.4.1","depth":2,"next":{"title":"Config.plist Basics","level":"1.4.2","depth":2,"path":"clover-boot-manager/config.plist-basics.md","ref":"clover-boot-manager/config.plist-basics.md","articles":[]},"previous":{"title":"Clover Boot Manager","level":"1.4","depth":1,"path":"clover-boot-manager/README.md","ref":"clover-boot-manager/README.md","articles":[{"title":"Clover and friends [part 1]","level":"1.4.1","depth":2,"path":"clover-boot-manager/clover-and-friends.md","ref":"clover-boot-manager/clover-and-friends.md","articles":[]},{"title":"Config.plist Basics","level":"1.4.2","depth":2,"path":"clover-boot-manager/config.plist-basics.md","ref":"clover-boot-manager/config.plist-basics.md","articles":[]},{"title":"Clover and friends [part 2]","level":"1.4.3","depth":2,"path":"clover-boot-manager/clover-and-friends-part-2.md","ref":"clover-boot-manager/clover-and-friends-part-2.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":13,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"clover-boot-manager/clover-and-friends.md","mtime":"2020-01-24T00:42:19.887Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-24T00:43:04.061Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
