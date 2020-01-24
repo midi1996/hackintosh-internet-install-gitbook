@@ -62,11 +62,11 @@ Some users have reported **r5103** had this issue fixed.
 
 #### Prepare macOS Kexts
 
-1. Go to kexts &gt; Other
+Go to kexts &gt; Other
 
-   * Go to [Goldfish64's Kext Repo](http://kexts.goldfish64.com/)
+  * Go to [Goldfish64's Kext Repo](http://kexts.goldfish64.com/)
 
-   * Download these: [Note: Explore each folder and you'll find a Zip file, get that Zip file, not the whole folder]
+  * Download these: [Note: Explore each folder and you'll find a Zip file, get that Zip file, not the whole folder]
 
 **NECESSARY KEXTS**
 
@@ -101,11 +101,11 @@ Some users have reported **r5103** had this issue fixed.
 | *none* | QComAtheros: _NOPE_ - Change it |  
 | ATH9KFixUp | for Atheros based on _AR95XX-AR94XX_: ATH9KFixUp with proper boot argument options seen in the original github [repo](https://github.com/chunnann/ATH9KFixup) or rehabman's [fork](https://github.com/RehabMan/ATH9KFixup) \(DO NOT install it in /S/L/E, just use Clover's folder).<br />**The kext will not work on Catalina/Mojave anymore, AppleAtheros40 kext has been deprecated in 10.14+ and will need special workaround that will not work in a recovery environment.** |  
 
-2. Extract every zip
+1. Extract every zip
 
    * Note: a kexts is a macOS driver, and it's in a form of a `a_folder_name.kext`, on windows it will show as a folder, on macOS it will show as a file.
    
-3. now copy VirtualSMC.**kext** \(or FakeSMC.kext\) - Lilu.kext - WhateverGreen.kext - USBInjectAll.kext - AppleALC.kext - \[your\_ethernet\_driver\].kext \(and any extra kext you needed from above\) and put it in _**CLOVER \(USB\) &gt; EFI &gt; CLOVER &gt; kexts &gt; Other**_. _\[skip the sensor kexts, they may cause kernel panics, aka KP. For VirtualSMC, copy over SMCProcessor if you want to, leave the rest out\]_
+2. Now copy: VirtualSMC.kext - Lilu.kext - WhateverGreen.kext - USBInjectAll.kext - AppleALC.kext - \[your\_ethernet\_driver\].kext \(and any extra kext you needed from above\) and put it in _**CLOVER \(USB\) &gt; EFI &gt; CLOVER &gt; kexts &gt; Other**_. _\[skip the sensor kexts, they may cause kernel panics, aka KP. For VirtualSMC, copy over SMCProcessor if you want to, leave the rest out\]_
    
 4. **Basically what you should end up with**:
 
@@ -115,6 +115,7 @@ Some users have reported **r5103** had this issue fixed.
    - USBInjectAll.kext
    - VoodooPS2Controller.kext (for laptops and PS2 users)
    - **a network driver**.kext
+   - **other kext if needed**.kext
 
 5. Now you're mostly done with Clover and macOS installer preparation.
 
