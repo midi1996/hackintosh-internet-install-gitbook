@@ -40,7 +40,7 @@ Some users have reported **r5103** had this issue fixed.
   7. Install
   8. Go to **Step 7** below
 
-#### Prepare Clover
+#### Prepare Clover folder
 
 1. Open CLOVER &gt; EFI &gt; CLOVER
    1. delete `doc` and `OEM` \(remove if any found\)
@@ -59,10 +59,14 @@ Some users have reported **r5103** had this issue fixed.
       1. `drivers > BIOS`
    2. Legacy users, delete:
       1. `drivers > UEFI`
-   
-4. Go to kexts &gt; Other
+
+#### Prepare macOS Kexts
+
+1. Go to kexts &gt; Other
+
    * Go to [Goldfish64's Kext Repo](http://kexts.goldfish64.com/)
-   * Download these: _\[Note: Explore each folder and you'll find a Zip file, get that Zip file, not the whole folder\]_
+
+   * Download these: [Note: Explore each folder and you'll find a Zip file, get that Zip file, not the whole folder]
 
      **NECESSARY KEXTS**
 
@@ -90,20 +94,20 @@ Some users have reported **r5103** had this issue fixed.
    
      | Wireless Kext | Devices to use with |  
      | :--- | :--- |  
-     | *none* | USB Wifi Users: **NO \[won't work while the install, look for the driver after the install** |  
+     | *none* | USB Wifi Users: **NO [won't work while the install, look for the driver after the install]** |  
      | AirPortBrcmFixUp | For Broadcom chipsets: BCM4360, BCM4352, BCM4350 (found in DW1830, DW1560, DW1820A -- not recommended card --, Apple BRCM94360CS2/2CS/CD) |  
      | ProbookAtheros.kext | for Atheros based chips _\(AR5B95/195/97/197, based on AR9280/AR9285 SoC\)_:<br/>           * go to [HP Probook 4x30 DSDT Patch](https://github.com/RehabMan/HP-ProBook-4x30s-DSDT-Patch/archive/master.zip)<br/>           * extract the zip<br/>           * explore to `kexts`<br/>           * get `ProbookAtheros.kext`<br />**The kext will not work on Catalina/Mojave anymore, AppleAtheros40 kext has been deprecated in 10.14+ and will need special workaround that will not work in a recovery environment.** |  
      | *none* | Intel: _NOPE_ - Change it |  
      | *none* | QComAtheros: _NOPE_ - Change it |  
      | ATH9KFixUp | for Atheros based on _AR95XX-AR94XX_: ATH9KFixUp with proper boot argument options seen in the original github [repo](https://github.com/chunnann/ATH9KFixup) or rehabman's [fork](https://github.com/RehabMan/ATH9KFixup) \(DO NOT install it in /S/L/E, just use Clover's folder).<br />**The kext will not work on Catalina/Mojave anymore, AppleAtheros40 kext has been deprecated in 10.14+ and will need special workaround that will not work in a recovery environment.** |  
 
-5. Extract every zip
-   
+2. Extract every zip
+
    * Note: a kexts is a macOS driver, and it's in a form of a `a_folder_name.kext`, on windows it will show as a folder, on macOS it will show as a file.
    
-6. now copy VirtualSMC.**kext** \(or FakeSMC.kext\) - Lilu.kext - WhateverGreen.kext - USBInjectAll.kext - AppleALC.kext - \[your\_ethernet\_driver\].kext \(and any extra kext you needed from above\) and put it in _**CLOVER \(USB\) &gt; EFI &gt; CLOVER &gt; kexts &gt; Other**_. _\[skip the sensor kexts, they may cause kernel panics, aka KP. For VirtualSMC, copy over SMCProcessor if you want to, leave the rest out\]_
+3. now copy VirtualSMC.**kext** \(or FakeSMC.kext\) - Lilu.kext - WhateverGreen.kext - USBInjectAll.kext - AppleALC.kext - \[your\_ethernet\_driver\].kext \(and any extra kext you needed from above\) and put it in _**CLOVER \(USB\) &gt; EFI &gt; CLOVER &gt; kexts &gt; Other**_. _\[skip the sensor kexts, they may cause kernel panics, aka KP. For VirtualSMC, copy over SMCProcessor if you want to, leave the rest out\]_
    
-7. **Basically what you should end up with**:
+4. **Basically what you should end up with**:
 
    - Lilu.kext
    - VirtualSMC.kext
@@ -112,7 +116,7 @@ Some users have reported **r5103** had this issue fixed.
    - VoodooPS2Controller.kext (for laptops and PS2 users)
    - **a network driver**.kext
 
-8. Now you're mostly done with Clover and macOS installer preparation.
+5. Now you're mostly done with Clover and macOS installer preparation.
 
 **Extra note for X299 people:**
 
