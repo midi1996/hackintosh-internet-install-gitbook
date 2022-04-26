@@ -13,7 +13,7 @@ After cloning/downloading `gibMacOS`, you'll have to open the the folder where i
 
 Now that you're inside the command prompt/powershell/terminal, we'll use gibMacOS to download the Recovery HD to be restored:
 
-1. run `python gibMacOS.command -r -v <macos version>` and replace `<macos version>` with your target version:
+1. run `python gibMacOS.py -r -v <macos version>` and replace `<macos version>` with your target version:
    * `10.14` or `mojave` for macOS Mojave release
    * `10.13` or `"high sierra"` \(with quotes\) for macOS High Sierra release
    * For the older releases, just download the `.pkg` file directly, as they've been removed from the catalog that apple provides:
